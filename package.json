@@ -9,7 +9,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "bootstrap": "^5.0.2",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.3",
     "del": "^6.0.0",
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
@@ -20,7 +20,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.3.5",
     "postcss-uncss": "^0.17.0",
-    "prettier": "2.3.1",
+    "prettier": "2.3.2",
     "sass": "^1.35.1",
     "surge": "^0.23.0",
     "uncss": "^0.17.3"
