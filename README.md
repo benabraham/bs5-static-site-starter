@@ -71,7 +71,7 @@ Folders and files from `/src/static/` are simply copied directly to `/dist/` fol
 
 You can comment out Bootstrap components you don't need in `/src/index.scss`.
 
-`/src/_custom-bootstrap-variables.scss` contains only customized Bootstrap variables.
+`/src/_1-customized-bootstrap-variables.scss` contains only customized Bootstrap variables.
 
 See `browserslist` in `package.json` for supported browsers.
 
