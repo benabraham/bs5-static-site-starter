@@ -20,7 +20,7 @@ Includes:
 ### Install all packages from `package.json` locally
 
 ```shell
-npm install
+npm ci
 ```
 
 _If you’re having errors with `node-gyp`, try [installing it globally](https://github.com/nodejs/node-gyp#installation)._
