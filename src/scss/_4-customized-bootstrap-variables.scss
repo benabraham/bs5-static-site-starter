@@ -454,20 +454,29 @@
     //
     // Extends the default `$theme-colors` maps to help create our utilities.
 
-    // uncomment whole block
-    // so you can define only new ones you need
+    // Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
+
+    // uncomment the whole block
     /*
-    $utilities-colors: map-merge(
-        $theme-colors-rgb,
-        (
-            "black": to-rgb($black),
-            "white": to-rgb($white),
-            "body": to-rgb($body-color)
-        )
-    ); $utilities-colors: $utilities-colors !global;
+    $utilities-colors: $theme-colors-rgb; $utilities-colors: $utilities-colors !global; // do not change!
+    $utilities-text: map-merge(
+            $utilities-colors,
+            (
+                "black": to-rgb($black),
+                "white": to-rgb($white),
+                "body": to-rgb($body-color)
+            )
+    ); $utilities-text: $utilities-text !global;
+
+    $utilities-bg: map-merge(
+            $utilities-colors,
+            (
+                "black": to-rgb($black),
+                "white": to-rgb($white),
+                "body": to-rgb($body-bg)
+            )
+    ); $utilities-bg: $utilities-bg !global;
     */
-    // $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text"); $utilities-text-colors: $utilities-text-colors !global; // map-loop($utilities-colors, rgba-css-var, "$key", "text")
-    // $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg"); $utilities-bg-colors: $utilities-bg-colors !global; // map-loop($utilities-colors, rgba-css-var, "$key", "bg")
 
 
     // Links
@@ -1142,7 +1151,7 @@
     // $dropdown-box-shadow: $box-shadow; $dropdown-box-shadow: $dropdown-box-shadow !global; // $box-shadow
 
     // $dropdown-link-color: $gray-900; $dropdown-link-color: $dropdown-link-color !global; // $gray-900
-    // $dropdown-link-hover-color: shade-color($gray-900, 10%); $dropdown-link-hover-color: $dropdown-link-hover-color !global; // shade-color($gray-900, 10%)
+    // $dropdown-link-hover-color: shade-color($dropdown-link-color, 10%); $dropdown-link-hover-color: $dropdown-link-hover-color !global; // shade-color($dropdown-link-color, 10%)
     // $dropdown-link-hover-bg: $gray-200; $dropdown-link-hover-bg: $dropdown-link-hover-bg !global; // $gray-200
 
     // $dropdown-link-active-color: $component-active-color; $dropdown-link-active-color: $dropdown-link-active-color !global; // $component-active-color
