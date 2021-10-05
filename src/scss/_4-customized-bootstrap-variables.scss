@@ -930,7 +930,7 @@
     // $form-check-btn-check-disabled-opacity: $btn-disabled-opacity; $form-check-btn-check-disabled-opacity: $form-check-btn-check-disabled-opacity !global; // $btn-disabled-opacity
     // $form-check-inline-margin-end: 1rem; $form-check-inline-margin-end: $form-check-inline-margin-end !global; // 1rem
 
-    // $form-switch-color: rgba(0, 0, 0, .25); $form-switch-color: $form-switch-color !global; // rgba(0, 0, 0, .25)
+    // $form-switch-color: rgba($black, .25); $form-switch-color: $form-switch-color !global; // rgba($black, .25)
     // $form-switch-width: 2em; $form-switch-width: $form-switch-width !global; // 2em
     // $form-switch-padding-start: $form-switch-width + .5em; $form-switch-padding-start: $form-switch-padding-start !global; // $form-switch-width + .5em
     // $form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>"); $form-switch-bg-image: $form-switch-bg-image !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>")
@@ -974,7 +974,7 @@
 
     // $form-select-border-width: $input-border-width; $form-select-border-width: $form-select-border-width !global; // $input-border-width
     // $form-select-border-color: $input-border-color; $form-select-border-color: $form-select-border-color !global; // $input-border-color
-    // $form-select-border-radius: $border-radius; $form-select-border-radius: $form-select-border-radius !global; // $border-radius
+    // $form-select-border-radius: $input-border-radius; $form-select-border-radius: $form-select-border-radius !global; // $input-border-radius
     // $form-select-box-shadow: $box-shadow-inset; $form-select-box-shadow: $form-select-box-shadow !global; // $box-shadow-inset
 
     // $form-select-focus-border-color: $input-focus-border-color; $form-select-focus-border-color: $form-select-focus-border-color !global; // $input-focus-border-color
@@ -984,10 +984,12 @@
     // $form-select-padding-y-sm: $input-padding-y-sm; $form-select-padding-y-sm: $form-select-padding-y-sm !global; // $input-padding-y-sm
     // $form-select-padding-x-sm: $input-padding-x-sm; $form-select-padding-x-sm: $form-select-padding-x-sm !global; // $input-padding-x-sm
     // $form-select-font-size-sm: $input-font-size-sm; $form-select-font-size-sm: $form-select-font-size-sm !global; // $input-font-size-sm
+    // $form-select-border-radius-sm: $input-border-radius-sm; $form-select-border-radius-sm: $form-select-border-radius-sm !global; // $input-border-radius-sm
 
     // $form-select-padding-y-lg: $input-padding-y-lg; $form-select-padding-y-lg: $form-select-padding-y-lg !global; // $input-padding-y-lg
     // $form-select-padding-x-lg: $input-padding-x-lg; $form-select-padding-x-lg: $form-select-padding-x-lg !global; // $input-padding-x-lg
     // $form-select-font-size-lg: $input-font-size-lg; $form-select-font-size-lg: $form-select-font-size-lg !global; // $input-font-size-lg
+    // $form-select-border-radius-lg: $input-border-radius-lg; $form-select-border-radius-lg: $form-select-border-radius-lg !global; // $input-border-radius-lg
 
     // $form-select-transition: $input-transition; $form-select-transition: $form-select-transition !global; // $input-transition
     // $form-range-track-width: 100%; $form-range-track-width: $form-range-track-width !global; // 100%
@@ -1337,14 +1339,14 @@
     // $toast-color: null; $toast-color: $toast-color !global; // null
     // $toast-background-color: rgba($white, .85); $toast-background-color: $toast-background-color !global; // rgba($white, .85)
     // $toast-border-width: 1px; $toast-border-width: $toast-border-width !global; // 1px
-    // $toast-border-color: rgba(0, 0, 0, .1); $toast-border-color: $toast-border-color !global; // rgba(0, 0, 0, .1)
+    // $toast-border-color: rgba($black, .1); $toast-border-color: $toast-border-color !global; // rgba($black, .1)
     // $toast-border-radius: $border-radius; $toast-border-radius: $toast-border-radius !global; // $border-radius
     // $toast-box-shadow: $box-shadow; $toast-box-shadow: $toast-box-shadow !global; // $box-shadow
     // $toast-spacing: $container-padding-x; $toast-spacing: $toast-spacing !global; // $container-padding-x
 
     // $toast-header-color: $gray-600; $toast-header-color: $toast-header-color !global; // $gray-600
     // $toast-header-background-color: rgba($white, .85); $toast-header-background-color: $toast-header-background-color !global; // rgba($white, .85)
-    // $toast-header-border-color: rgba(0, 0, 0, .05); $toast-header-border-color: $toast-header-border-color !global; // rgba(0, 0, 0, .05)
+    // $toast-header-border-color: rgba($black, .05); $toast-header-border-color: $toast-header-border-color !global; // rgba($black, .05)
 
 
     // Badges

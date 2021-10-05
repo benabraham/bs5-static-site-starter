@@ -42,7 +42,7 @@ const htmlCompile = () => src('src/templates/**/[^_]*.njk')
     .pipe(dest('./dist/')); // put compiled html into dist folder
 
 // create and process CSS
-const sassCompile = () => src('src/scss/index.scss') // this is the source of for compilation
+const sassCompile = () => src('src/scss/index.scss') // this is the source for compilation
     .pipe(sourcemaps.init()) // initalizes a sourcemap
     .pipe(sass.sync().on('error', sass.logError)) // compile SCSS to CSS and also tell us about a problem if happens
     .pipe(
