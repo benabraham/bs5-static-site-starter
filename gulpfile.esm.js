@@ -50,7 +50,7 @@ const sassCompile = () => src('src/scss/index.scss') // this is the source for c
             autoprefixer, // automatically adds vendor prefixes if needed
             // see browserslist in package.json for included browsers
             // Official Bootstrap browser support policy:
-            // https://getbootstrap.com/docs/5.1/getting-started/browsers-devices/#supported-browsers
+            // https://getbootstrap.com/docs/5.2/getting-started/browsers-devices/#supported-browsers
         ])
     )
     .pipe(csso()) // compresses CSS

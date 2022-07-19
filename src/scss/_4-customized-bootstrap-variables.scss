@@ -98,35 +98,12 @@
         "green": $green,
         "teal": $teal,
         "cyan": $cyan,
+        "black": $black,
         "white": $white,
         "gray": $gray-600,
         "gray-dark": $gray-800
     ); $colors: $colors !global;
     */
-
-    // $primary: $blue; $primary: $primary !global; // $blue
-    // $secondary: $gray-600; $secondary: $secondary !global; // $gray-600
-    // $success: $green; $success: $success !global; // $green
-    // $info: $cyan; $info: $info !global; // $cyan
-    // $warning: $yellow; $warning: $warning !global; // $yellow
-    // $danger: $red; $danger: $danger !global; // $red
-    // $light: $gray-100; $light: $light !global; // $gray-100
-    // $dark: $gray-900; $dark: $dark !global; // $gray-900
-
-    /*
-    $theme-colors: (
-        "primary": $primary,
-        "secondary": $secondary,
-        "success": $success,
-        "info": $info,
-        "warning": $warning,
-        "danger": $danger,
-        "light": $light,
-        "dark": $dark,
-    ); $theme-colors: $theme-colors !global;
-    */
-
-    // $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value"); $theme-colors-rgb: $theme-colors-rgb !global; // map-loop($theme-colors, to-rgb, "$value")
 
     // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
     // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
@@ -264,8 +241,8 @@
     */
     /*
     $purples: (
-        "purple-100": $purple-200,
-        "purple-200": $purple-100,
+        "purple-100": $purple-100,
+        "purple-200": $purple-200,
         "purple-300": $purple-300,
         "purple-400": $purple-400,
         "purple-500": $purple-500,
@@ -367,6 +344,28 @@
     ); $cyans: $cyans !global;
     */
 
+    // $primary: $blue; $primary: $primary !global; // $blue
+    // $secondary: $gray-600; $secondary: $secondary !global; // $gray-600
+    // $success: $green; $success: $success !global; // $green
+    // $info: $cyan; $info: $info !global; // $cyan
+    // $warning: $yellow; $warning: $warning !global; // $yellow
+    // $danger: $red; $danger: $danger !global; // $red
+    // $light: $gray-100; $light: $light !global; // $gray-100
+    // $dark: $gray-900; $dark: $dark !global; // $gray-900
+
+    /*
+    $theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark,
+    ); $theme-colors: $theme-colors !global;
+    */
+
     // Characters which are escaped by the escape-svg function
     /*
     $escaped-characters: (
@@ -390,6 +389,7 @@
     // $enable-reduced-motion: true; $enable-reduced-motion: $enable-reduced-motion !global; // true
     // $enable-smooth-scroll: true; $enable-smooth-scroll: $enable-smooth-scroll !global; // true
     // $enable-grid-classes: true; $enable-grid-classes: $enable-grid-classes !global; // true
+    // $enable-container-classes: true; $enable-container-classes: $enable-container-classes !global; // true
     // $enable-cssgrid: false; $enable-cssgrid: $enable-cssgrid !global; // false
     // $enable-button-pointers: true; $enable-button-pointers: $enable-button-pointers !global; // true
     // $enable-rfs: true; $enable-rfs: $enable-rfs !global; // true
@@ -400,7 +400,8 @@
 
     // Prefix for :root CSS variables
 
-    // $variable-prefix: bs-; $variable-prefix: $variable-prefix !global; // bs-
+    // $variable-prefix: bs-; $variable-prefix: $variable-prefix !global; // bs- // Deprecated in v5.2.0 for the shorter `$prefix`
+    // $prefix: $variable-prefix; $prefix: $prefix !global; // $variable-prefix
 
     // Gradient
     //
@@ -427,8 +428,6 @@
     ); $spacers: $spacers !global;
     */
 
-    // $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null); $negative-spacers: $negative-spacers !global; // if($enable-negative-margins, negativify-map($spacers), null)
-
     // Position
     //
     // Define the edge positioning anchors of the position utilities.
@@ -448,35 +447,6 @@
     // $body-bg: $white; $body-bg: $body-bg !global; // $white
     // $body-color: $gray-900; $body-color: $body-color !global; // $gray-900
     // $body-text-align: null; $body-text-align: $body-text-align !global; // null
-
-
-    // Utilities maps
-    //
-    // Extends the default `$theme-colors` maps to help create our utilities.
-
-    // Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
-
-    // uncomment the whole block
-    /*
-    $utilities-colors: $theme-colors-rgb; $utilities-colors: $utilities-colors !global; // do not change!
-    $utilities-text: map-merge(
-            $utilities-colors,
-            (
-                "black": to-rgb($black),
-                "white": to-rgb($white),
-                "body": to-rgb($body-color)
-            )
-    ); $utilities-text: $utilities-text !global;
-
-    $utilities-bg: map-merge(
-            $utilities-colors,
-            (
-                "black": to-rgb($black),
-                "white": to-rgb($white),
-                "body": to-rgb($body-bg)
-            )
-    ); $utilities-bg: $utilities-bg !global;
-    */
 
 
     // Links
@@ -540,11 +510,9 @@
     // $grid-gutter-width: 1.5rem; $grid-gutter-width: $grid-gutter-width !global; // 1.5rem
     // $grid-row-columns: 6; $grid-row-columns: $grid-row-columns !global; // 6
 
-    // $gutters: $spacers; $gutters: $gutters !global; // $spacers
-
     // Container padding
 
-    // $container-padding-x: $grid-gutter-width * .5; $container-padding-x: $container-padding-x !global; // $grid-gutter-width * .5
+    // $container-padding-x: $grid-gutter-width; $container-padding-x: $container-padding-x !global; // $grid-gutter-width
 
 
     // Components
@@ -563,11 +531,18 @@
     ); $border-widths: $border-widths !global;
     */
 
+    // $border-style: solid; $border-style: $border-style !global; // solid
     // $border-color: $gray-300; $border-color: $border-color !global; // $gray-300
+    // $border-color-translucent: rgba($black, .175); $border-color-translucent: $border-color-translucent !global; // rgba($black, .175)
 
     // $border-radius: .25rem; $border-radius: $border-radius !global; // .25rem
     // $border-radius-sm: .2rem; $border-radius-sm: $border-radius-sm !global; // .2rem
     // $border-radius-lg: .3rem; $border-radius-lg: $border-radius-lg !global;  // .3rem
+    // $border-radius: .375rem; $border-radius: $border-radius !global;  // .375rem
+    // $border-radius-sm: .25rem; $border-radius-sm: $border-radius-sm !global;  // .25rem
+    // $border-radius-lg: .5rem; $border-radius-lg: $border-radius-lg !global;  // .5rem
+    // $border-radius-xl: 1rem; $border-radius-xl: $border-radius-xl !global;  // 1rem
+    // $border-radius-2xl: 2rem; $border-radius-2xl: $border-radius-2xl !global;  // 2rem
     // $border-radius-pill: 50rem; $border-radius-pill: $border-radius-pill !global; // 50rem
 
     // $box-shadow: 0 .5rem 1rem rgba($black, .15); $box-shadow: $box-shadow !global; // 0 .5rem 1rem rgba($black, .15)
@@ -604,11 +579,11 @@
     // Font, line-height, and color for body text, headings, and more.
 
     // stylelint-disable value-keyword-case
-    // $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $font-family-sans-serif: $font-family-sans-serif !global; // system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    // $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $font-family-sans-serif: $font-family-sans-serif !global; // system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
     // $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; $font-family-monospace: $font-family-monospace !global; // SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
     // stylelint-enable value-keyword-case
-    // $font-family-base: var(--#{$variable-prefix}font-sans-serif); $font-family-base: $font-family-base !global; // var(--#{$variable-prefix}font-sans-serif)
-    // $font-family-code: var(--#{$variable-prefix}font-monospace); $font-family-code: $font-family-code !global; // var(--#{$variable-prefix}font-monospace)
+    // $font-family-base: var(--#{$prefix}font-sans-serif); $font-family-base: $font-family-base !global; // var(--#{$prefix}font-sans-serif)
+    // $font-family-code: var(--#{$prefix}font-monospace); $font-family-code: $font-family-code !global; // var(--#{$prefix}font-monospace)
     // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings and margins
     // $font-size-base affects the font size of the body text
     // $font-size-root: null; $font-size-root: $font-size-root !global; // null
@@ -619,6 +594,7 @@
     // $font-weight-lighter: lighter; $font-weight-lighter: $font-weight-lighter !global; // lighter
     // $font-weight-light: 300; $font-weight-light: $font-weight-light !global; // 300
     // $font-weight-normal: 400; $font-weight-normal: $font-weight-normal !global; // 400
+    // $font-weight-semibold: 600; $font-weight-semibold: $font-weight-semibold !global; // 600
     // $font-weight-bold: 700; $font-weight-bold: $font-weight-bold !global; // 700
     // $font-weight-bolder: bolder; $font-weight-bolder: $font-weight-bolder !global; // bolder
 
@@ -664,6 +640,8 @@
     ); $display-font-sizes: $display-font-sizes !global;
     */
 
+    // $display-font-family: null; $display-font-family: $display-font-family !global; // null
+    // $display-font-style: null; $display-font-style: $display-font-style !global; // null
     // $display-font-weight: 300; $display-font-weight: $display-font-weight !global; // 300
     // $display-line-height: $headings-line-height; $display-line-height: $display-line-height !global; // $headings-line-height
 
@@ -685,22 +663,24 @@
 
     // $hr-margin-y: $spacer; $hr-margin-y: $hr-margin-y !global; // $spacer
     // $hr-color: inherit; $hr-color: $hr-color !global; // inherit
-    // $hr-height: $border-width; $hr-height: $hr-height !global; // $border-width
+    // $hr-bg-color: null; $hr-bg-color: $hr-bg-color !global; // null // Deprecated in v5.2.0
+    // $hr-height: null; $hr-height: $hr-height !global; // null // Deprecated in v5.2.0
+
+    // $hr-border-color: null; $hr-border-color: $hr-border-color !global; // null // Allows for inherited colors
+    // $hr-border-width: $border-width; $hr-border-width: $hr-border-width !global; // $border-width
     // $hr-opacity: .25; $hr-opacity: $hr-opacity !global; // .25
 
     // $legend-margin-bottom: .5rem; $legend-margin-bottom: $legend-margin-bottom !global; // .5rem
     // $legend-font-size: 1.5rem; $legend-font-size: $legend-font-size !global; // 1.5rem
     // $legend-font-weight: null; $legend-font-weight: $legend-font-weight !global; // null
 
-    // $mark-padding: .2em; $mark-padding: $mark-padding !global; // .2em
 
     // $dt-font-weight: $font-weight-bold; $dt-font-weight: $dt-font-weight !global; // $font-weight-bold
 
-    // $nested-kbd-font-weight: $font-weight-bold; $nested-kbd-font-weight: $nested-kbd-font-weight !global; // $font-weight-bold
-
     // $list-inline-padding: .5rem; $list-inline-padding: $list-inline-padding !global; // .5rem
 
-    // $mark-bg: #fcf8e3; $mark-bg: $mark-bg !global; // #fcf8e3
+    // $mark-padding: .1875em; $mark-padding: $mark-padding !global; // .1875em
+    // $mark-bg: $yellow-100; $mark-bg: $mark-bg !global; // $yellow-100
 
 
     // Tables
@@ -714,7 +694,7 @@
 
     // $table-cell-vertical-align: top; $table-cell-vertical-align: $table-cell-vertical-align !global; // top
 
-    // $table-color: $body-color; $table-color: $table-color !global; // $body-color
+    // $table-color: var(--#{$prefix}body-color); $table-color: $table-color !global; // var(--#{$prefix}body-color)
     // $table-bg: transparent; $table-bg: $table-bg !global; // transparent
 
     // $table-th-font-weight: null; $table-th-font-weight: $table-th-font-weight !global; // null
@@ -733,11 +713,12 @@
 
     // $table-border-factor: .1; $table-border-factor: $table-border-factor !global; // .1
     // $table-border-width: $border-width; $table-border-width: $table-border-width !global; // $border-width
-    // $table-border-color: $border-color; $table-border-color: $table-border-color !global; // $border-color
+    // $table-border-color: var(--#{$prefix}border-color); $table-border-color: $table-border-color !global; // var(--#{$prefix}border-color)
 
     // $table-striped-order: odd; $table-striped-order: $table-striped-order !global; // odd
+    // $table-striped-columns-order: even; $table-striped-columns-order: $table-striped-columns-order !global; // even
 
-    // $table-group-separator-color: currentColor; $table-group-separator-color: $table-group-separator-color !global; // currentColor
+    // $table-group-separator-color: currentcolor; $table-group-separator-color: $table-group-separator-color !global; // currentcolor
 
     // $table-caption-color: $text-muted; $table-caption-color: $table-caption-color !global; // $text-muted
 
@@ -811,8 +792,8 @@
     // $btn-disabled-opacity: .65; $btn-disabled-opacity: $btn-disabled-opacity !global; // .65
     // $btn-active-box-shadow: inset 0 3px 5px rgba($black, .125); $btn-active-box-shadow: $btn-active-box-shadow !global; // inset 0 3px 5px rgba($black, .125)
 
-    // $btn-link-color: $link-color; $btn-link-color: $btn-link-color !global; // $link-color
-    // $btn-link-hover-color: $link-hover-color; $btn-link-hover-color: $btn-link-hover-color !global; // $link-hover-color
+    // $btn-link-color: var(--#{$prefix}link-color); $btn-link-color: $btn-link-color !global; // var(--#{$prefix}link-color)
+    // $btn-link-hover-color: var(--#{$prefix}link-hover-color); $btn-link-hover-color: $btn-link-hover-color !global; // var(--#{$prefix}link-hover-color)
     // $btn-link-disabled-color: $gray-600; $btn-link-disabled-color: $btn-link-disabled-color !global; // $gray-600
 
     // Allows for customizing button radius independently from global border radius
@@ -862,6 +843,7 @@
     // $input-font-size-lg: $input-btn-font-size-lg; $input-font-size-lg: $input-font-size-lg !global; // $input-btn-font-size-lg
 
     // $input-bg: $body-bg; $input-bg: $input-bg !global; // $body-bg
+    // $input-disabled-color: null; $input-disabled-color: $input-disabled-color !global; // null
     // $input-disabled-bg: $gray-200; $input-disabled-bg: $input-disabled-bg !global; // $gray-200
     // $input-disabled-border-color: null; $input-disabled-border-color: $input-disabled-border-color !global; // null
 
@@ -917,7 +899,7 @@
     // $form-check-input-checked-color: $component-active-color; $form-check-input-checked-color: $form-check-input-checked-color !global; // $component-active-color
     // $form-check-input-checked-bg-color: $component-active-bg; $form-check-input-checked-bg-color: $form-check-input-checked-bg-color !global; // $component-active-bg
     // $form-check-input-checked-border-color: $form-check-input-checked-bg-color; $form-check-input-checked-border-color: $form-check-input-checked-border-color !global; // $form-check-input-checked-bg-color
-    // $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"); $form-check-input-checked-bg-image: $form-check-input-checked-bg-image !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>")
+    // $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>"); $form-check-input-checked-bg-image: $form-check-input-checked-bg-image !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>")
     // $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>"); $form-check-radio-checked-bg-image: $form-check-radio-checked-bg-image !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>")
 
     // $form-check-input-indeterminate-color: $component-active-color; $form-check-input-indeterminate-color: $form-check-input-indeterminate-color !global; // $component-active-color
@@ -966,7 +948,7 @@
     // $form-select-bg-position: right $form-select-padding-x center; $form-select-bg-position: $form-select-bg-position !global; // right $form-select-padding-x center
     // $form-select-bg-size: 16px 12px; $form-select-bg-size: $form-select-bg-size !global; // 16px 12px // In pixels because image dimensions
     // $form-select-indicator-color: $gray-800; $form-select-indicator-color: $form-select-indicator-color !global; // $gray-800
-    // $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>"); $form-select-indicator: $form-select-indicator !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>")
+    // $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>"); $form-select-indicator: $form-select-indicator !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>")
 
     // $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding; $form-select-feedback-icon-padding-end: $form-select-feedback-icon-padding-end !global; // $form-select-padding-x * 2.5 + $form-select-indicator-padding
     // $form-select-feedback-icon-position: center right $form-select-indicator-padding; $form-select-feedback-icon-position: $form-select-feedback-icon-position !global; // center right $form-select-indicator-padding
@@ -1035,7 +1017,7 @@
     // $form-feedback-invalid-color: $danger; $form-feedback-invalid-color: $form-feedback-invalid-color !global; // $danger
 
     // $form-feedback-icon-valid-color: $form-feedback-valid-color; $form-feedback-icon-valid-color: $form-feedback-icon-valid-color !global; // $form-feedback-valid-color
-    // $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>"); $form-feedback-icon-valid: $form-feedback-icon-valid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>")
+    // $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>"); $form-feedback-icon-valid: $form-feedback-icon-valid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>")
     // $form-feedback-icon-invalid-color: $form-feedback-invalid-color; $form-feedback-icon-invalid-color: $form-feedback-icon-invalid-color !global; // $form-feedback-invalid-color
     // $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>"); $form-feedback-icon-invalid: $form-feedback-icon-invalid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>")
 
@@ -1066,6 +1048,7 @@
     // $zindex-modal: 1055; $zindex-modal: $zindex-modal !global; // 1055
     // $zindex-popover: 1070; $zindex-popover: $zindex-popover !global; // 1070
     // $zindex-tooltip: 1080; $zindex-tooltip: $zindex-tooltip !global; // 1080
+    // $zindex-toast: 1090; $zindex-toast: $zindex-toast !global; // 1090
 
 
     // Navs
@@ -1074,8 +1057,8 @@
     // $nav-link-padding-x: 1rem; $nav-link-padding-x: $nav-link-padding-x !global; // 1rem
     // $nav-link-font-size: null; $nav-link-font-size: $nav-link-font-size !global; // null
     // $nav-link-font-weight: null; $nav-link-font-weight: $nav-link-font-weight !global; // null
-    // $nav-link-color: $link-color; $nav-link-color: $nav-link-color !global; // $link-color
-    // $nav-link-hover-color: $link-hover-color; $nav-link-hover-color: $nav-link-hover-color !global; // $link-hover-color
+    // $nav-link-color: var(--#{$prefix}link-color); $nav-link-color: $nav-link-color !global; // var(--#{$prefix}link-color)
+    // $nav-link-hover-color: var(--#{$prefix}link-hover-color); $nav-link-hover-color: $nav-link-hover-color !global; // var(--#{$prefix}link-hover-color)
     // $nav-link-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out; $nav-link-transition: $nav-link-transition !global; // color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
     // $nav-link-disabled-color: $gray-600; $nav-link-disabled-color: $nav-link-disabled-color !global; // $gray-600
 
@@ -1144,7 +1127,7 @@
     // $dropdown-font-size: $font-size-base; $dropdown-font-size: $dropdown-font-size !global; // $font-size-base
     // $dropdown-color: $body-color; $dropdown-color: $dropdown-color !global; // $body-color
     // $dropdown-bg: $white; $dropdown-bg: $dropdown-bg !global; // $white
-    // $dropdown-border-color: rgba($black, .15); $dropdown-border-color: $dropdown-border-color !global; // rgba($black, .15)
+    // $dropdown-border-color: var(--#{$prefix}border-color-translucent); $dropdown-border-color: $dropdown-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $dropdown-border-radius: $border-radius; $dropdown-border-radius: $dropdown-border-radius !global; // $border-radius
     // $dropdown-border-width: $border-width; $dropdown-border-width: $dropdown-border-width !global; // $border-width
     // $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width); $dropdown-inner-border-radius: $dropdown-inner-border-radius !global; // subtract($dropdown-border-radius, $dropdown-border-width)
@@ -1165,7 +1148,10 @@
     // $dropdown-item-padding-x: $spacer; $dropdown-item-padding-x: $dropdown-item-padding-x !global; // $spacer
 
     // $dropdown-header-color: $gray-600; $dropdown-header-color: $dropdown-header-color !global; // $gray-600
-    // $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x; $dropdown-header-padding: $dropdown-header-padding !global; // $dropdown-padding-y $dropdown-item-padding-x
+
+    // $dropdown-header-padding-x: $dropdown-item-padding-x; $dropdown-header-padding-x: $dropdown-header-padding-x !global; // $dropdown-item-padding-x
+    // $dropdown-header-padding-y: $dropdown-padding-y; $dropdown-header-padding-y: $dropdown-header-padding-y !global; // $dropdown-padding-y
+    // $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x; $dropdown-header-padding: $dropdown-header-padding !global; // $dropdown-padding-y $dropdown-item-padding-x // Deprecated in v5.2.0
 
     // $dropdown-dark-color: $gray-300; $dropdown-dark-color: $dropdown-dark-color !global; // $gray-300
     // $dropdown-dark-bg: $gray-800; $dropdown-dark-bg: $dropdown-dark-bg !global; // $gray-800
@@ -1190,19 +1176,20 @@
     // $pagination-padding-y-lg: .75rem; $pagination-padding-y-lg: $pagination-padding-y-lg !global; // .75rem
     // $pagination-padding-x-lg: 1.5rem; $pagination-padding-x-lg: $pagination-padding-x-lg !global; // 1.5rem
 
-    // $pagination-color: $link-color; $pagination-color: $pagination-color !global; // $link-color
+    // $pagination-font-size: $font-size-base; $pagination-font-size: $pagination-font-size !global; // $font-size-base
+    // $pagination-color: var(--#{$prefix}link-color); $pagination-color: $pagination-color !global; // var(--#{$prefix}link-color)
     // $pagination-bg: $white; $pagination-bg: $pagination-bg !global; // $white
-    // $pagination-border-width: $border-width; $pagination-border-width: $pagination-border-width !global; // $border-width
     // $pagination-border-radius: $border-radius; $pagination-border-radius: $pagination-border-radius !global; // $border-radius
-    // $pagination-margin-start: -$pagination-border-width; $pagination-margin-start: $pagination-margin-start !global; // -$pagination-border-width
+    // $pagination-border-width: $border-width; $pagination-border-width: $pagination-border-width !global; // $border-width
+    // $pagination-margin-start: ($pagination-border-width * -1); $pagination-margin-start: $pagination-margin-start !global; // ($pagination-border-width * -1)
     // $pagination-border-color: $gray-300; $pagination-border-color: $pagination-border-color !global; // $gray-300
 
-    // $pagination-focus-color: $link-hover-color; $pagination-focus-color: $pagination-focus-color !global; // $link-hover-color
+    // $pagination-focus-color: var(--#{$prefix}link-hover-color); $pagination-focus-color: $pagination-focus-color !global; // var(--#{$prefix}link-hover-color)
     // $pagination-focus-bg: $gray-200; $pagination-focus-bg: $pagination-focus-bg !global; // $gray-200
     // $pagination-focus-box-shadow: $input-btn-focus-box-shadow; $pagination-focus-box-shadow: $pagination-focus-box-shadow !global; // $input-btn-focus-box-shadow
     // $pagination-focus-outline: 0; $pagination-focus-outline: $pagination-focus-outline !global; // 0
 
-    // $pagination-hover-color: $link-hover-color; $pagination-hover-color: $pagination-hover-color !global; // $link-hover-color
+    // $pagination-hover-color: var(--#{$prefix}link-hover-color); $pagination-hover-color: $pagination-hover-color !global; // var(--#{$prefix}link-hover-color)
     // $pagination-hover-bg: $gray-200; $pagination-hover-bg: $pagination-hover-bg !global; // $gray-200
     // $pagination-hover-border-color: $gray-300; $pagination-hover-border-color: $pagination-hover-border-color !global; // $gray-300
 
@@ -1230,7 +1217,7 @@
     // $card-spacer-x: $spacer; $card-spacer-x: $card-spacer-x !global; // $spacer
     // $card-title-spacer-y: $spacer * .5; $card-title-spacer-y: $card-title-spacer-y !global; // $spacer * .5
     // $card-border-width: $border-width; $card-border-width: $card-border-width !global; // $border-width
-    // $card-border-color: rgba($black, .125); $card-border-color: $card-border-color !global; // rgba($black, .125)
+    // $card-border-color: var(--#{$prefix}border-color-translucent); $card-border-color: $card-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $card-border-radius: $border-radius; $card-border-radius: $card-border-radius !global; // $border-radius
     // $card-box-shadow: null; $card-box-shadow: $card-box-shadow !global; // null
     // $card-inner-border-radius: subtract($card-border-radius, $card-border-width); $card-inner-border-radius: $card-inner-border-radius !global; // subtract($card-border-radius, $card-border-width)
@@ -1248,10 +1235,10 @@
 
     // $accordion-padding-y: 1rem; $accordion-padding-y: $accordion-padding-y !global; // 1rem
     // $accordion-padding-x: 1.25rem; $accordion-padding-x: $accordion-padding-x !global; // 1.25rem
-    // $accordion-color: $body-color; $accordion-color: $accordion-color !global; // $body-color
+    // $accordion-color: var(--#{$prefix}body-color); $accordion-color: $accordion-color !global; // var(--#{$prefix}body-color)
     // $accordion-bg: $body-bg; $accordion-bg: $accordion-bg !global; // $body-bg
     // $accordion-border-width: $border-width; $accordion-border-width: $accordion-border-width !global; // $border-width
-    // $accordion-border-color: rgba($black, .125); $accordion-border-color: $accordion-border-color !global; // rgba($black, .125)
+    // $accordion-border-color: var(--#{$prefix}border-color); $accordion-border-color: $accordion-border-color !global; // var(--#{$prefix}border-color)
     // $accordion-border-radius: $border-radius; $accordion-border-radius: $accordion-border-radius !global; // $border-radius
     // $accordion-inner-border-radius: subtract($accordion-border-radius, $accordion-border-width); $accordion-inner-border-radius: $accordion-inner-border-radius !global; // subtract($accordion-border-radius, $accordion-border-width)
 
@@ -1261,7 +1248,7 @@
     // $accordion-button-padding-y: $accordion-padding-y; $accordion-button-padding-y: $accordion-button-padding-y !global; // $accordion-padding-y
     // $accordion-button-padding-x: $accordion-padding-x; $accordion-button-padding-x: $accordion-button-padding-x !global; // $accordion-padding-x
     // $accordion-button-color: $accordion-color; $accordion-button-color: $accordion-button-color !global; // $accordion-color
-    // $accordion-button-bg: $accordion-bg; $accordion-button-bg: $accordion-button-bg !global; // $accordion-bg
+    // $accordion-button-bg: var(--#{$prefix}accordion-bg); $accordion-button-bg: $accordion-button-bg !global; // var(--#{$prefix}accordion-bg)
     // $accordion-transition: $btn-transition, border-radius .15s ease; $accordion-transition: $accordion-transition !global; // $btn-transition, border-radius .15s ease
     // $accordion-button-active-bg: tint-color($component-active-bg, 90%); $accordion-button-active-bg: $accordion-button-active-bg !global; // tint-color($component-active-bg, 90%)
     // $accordion-button-active-color: shade-color($primary, 10%); $accordion-button-active-color: $accordion-button-active-color !global; // shade-color($primary, 10%)
@@ -1288,11 +1275,11 @@
     // $tooltip-opacity: .9; $tooltip-opacity: $tooltip-opacity !global; // .9
     // $tooltip-padding-y: $spacer * .25; $tooltip-padding-y: $tooltip-padding-y !global; // $spacer * .25
     // $tooltip-padding-x: $spacer * .5; $tooltip-padding-x: $tooltip-padding-x !global; // $spacer * .5
-    // $tooltip-margin: 0; $tooltip-margin: $tooltip-margin !global; // 0
+    // $tooltip-margin: null; $tooltip-margin: $tooltip-margin !global; // null // TODO: remove this in v6
 
     // $tooltip-arrow-width: .8rem; $tooltip-arrow-width: $tooltip-arrow-width !global; // .8rem
     // $tooltip-arrow-height: .4rem; $tooltip-arrow-height: $tooltip-arrow-height !global; // .4rem
-    // $tooltip-arrow-color: $tooltip-bg; $tooltip-arrow-color: $tooltip-arrow-color !global; // $tooltip-bg
+    // $tooltip-arrow-color: null; $tooltip-arrow-color: $tooltip-arrow-color !global; // null // Deprecated in Bootstrap 5.2.0 for CSS variables
 
     // Form tooltips must come after regular tooltips
     // $form-feedback-tooltip-padding-y: $tooltip-padding-y; $form-feedback-tooltip-padding-y: $form-feedback-tooltip-padding-y !global; // $tooltip-padding-y
@@ -1309,13 +1296,14 @@
     // $popover-bg: $white; $popover-bg: $popover-bg !global; // $white
     // $popover-max-width: 276px; $popover-max-width: $popover-max-width !global; // 276px
     // $popover-border-width: $border-width; $popover-border-width: $popover-border-width !global; // $border-width
-    // $popover-border-color: rgba($black, .2); $popover-border-color: $popover-border-color !global; // rgba($black, .2)
+    // $popover-border-color: var(--#{$prefix}border-color-translucent); $popover-border-color: $popover-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $popover-border-radius: $border-radius-lg; $popover-border-radius: $popover-border-radius !global; // $border-radius-lg
     // $popover-inner-border-radius: subtract($popover-border-radius, $popover-border-width); $popover-inner-border-radius: $popover-inner-border-radius !global; // subtract($popover-border-radius, $popover-border-width)
     // $popover-box-shadow: $box-shadow; $popover-box-shadow: $popover-box-shadow !global; // $box-shadow
 
+    // $popover-header-font-size: $font-size-base; $popover-header-font-size: $popover-header-font-size !global; // $font-size-base
     // $popover-header-bg: shade-color($popover-bg, 6%); $popover-header-bg: $popover-header-bg !global; // shade-color($popover-bg, 6%)
-    // $popover-header-color: $headings-color; $popover-header-color: $popover-header-color !global; // $headings-color
+    // $popover-header-color: var(--#{$prefix}heading-color); $popover-header-color: $popover-header-color !global; // var(--#{$prefix}heading-color)
     // $popover-header-padding-y: .5rem; $popover-header-padding-y: $popover-header-padding-y !global; // .5rem
     // $popover-header-padding-x: $spacer; $popover-header-padding-x: $popover-header-padding-x !global; // $spacer
 
@@ -1325,10 +1313,9 @@
 
     // $popover-arrow-width: 1rem; $popover-arrow-width: $popover-arrow-width !global; // 1rem
     // $popover-arrow-height: .5rem; $popover-arrow-height: $popover-arrow-height !global; // .5rem
-    // $popover-arrow-color: $popover-bg; $popover-arrow-color: $popover-arrow-color !global; // $popover-bg
 
-    // $popover-arrow-outer-color: fade-in($popover-border-color, .05); $popover-arrow-outer-color: $popover-arrow-outer-color !global; // fade-in($popover-border-color, .05)
-
+    // $popover-arrow-color: $popover-bg; $popover-arrow-color: $popover-arrow-color !global; // $popover-bg // Deprecated in Bootstrap 5.2.0 for CSS variables
+    // $popover-arrow-outer-color: var(--#{$prefix}border-color-translucent); $popover-arrow-outer-color: $popover-arrow-outer-color !global; // var(--#{$prefix}border-color-translucent)
 
     // Toasts
 
@@ -1338,8 +1325,8 @@
     // $toast-font-size: .875rem; $toast-font-size: $toast-font-size !global; // .875rem
     // $toast-color: null; $toast-color: $toast-color !global; // null
     // $toast-background-color: rgba($white, .85); $toast-background-color: $toast-background-color !global; // rgba($white, .85)
-    // $toast-border-width: 1px; $toast-border-width: $toast-border-width !global; // 1px
-    // $toast-border-color: rgba($black, .1); $toast-border-color: $toast-border-color !global; // rgba($black, .1)
+    // $toast-border-width: $border-width; $toast-border-width: $toast-border-width !global; // $border-width
+    // $toast-border-color: var(--#{$prefix}border-color-translucent); $toast-border-color: $toast-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $toast-border-radius: $border-radius; $toast-border-radius: $toast-border-radius !global; // $border-radius
     // $toast-box-shadow: $box-shadow; $toast-box-shadow: $toast-box-shadow !global; // $box-shadow
     // $toast-spacing: $container-padding-x; $toast-spacing: $toast-spacing !global; // $container-padding-x
@@ -1372,7 +1359,7 @@
 
     // $modal-content-color: null; $modal-content-color: $modal-content-color !global; // null
     // $modal-content-bg: $white; $modal-content-bg: $modal-content-bg !global; // $white
-    // $modal-content-border-color: rgba($black, .2); $modal-content-border-color: $modal-content-border-color !global; // rgba($black, .2)
+    // $modal-content-border-color: var(--#{$prefix}border-color-translucent); $modal-content-border-color: $modal-content-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $modal-content-border-width: $border-width; $modal-content-border-width: $modal-content-border-width !global; // $border-width
     // $modal-content-border-radius: $border-radius-lg; $modal-content-border-radius: $modal-content-border-radius !global; // $border-radius-lg
     // $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width); $modal-content-inner-border-radius: $modal-content-inner-border-radius !global; // subtract($modal-content-border-radius, $modal-content-border-width)
@@ -1381,13 +1368,16 @@
 
     // $modal-backdrop-bg: $black; $modal-backdrop-bg: $modal-backdrop-bg !global; // $black
     // $modal-backdrop-opacity: .5; $modal-backdrop-opacity: $modal-backdrop-opacity !global; // .5
-    // $modal-header-border-color: $border-color; $modal-header-border-color: $modal-header-border-color !global; // $border-color
-    // $modal-footer-border-color: $modal-header-border-color; $modal-footer-border-color: $modal-footer-border-color !global; // $modal-header-border-color
+
+    // $modal-header-border-color: var(--#{$prefix}border-color); $modal-header-border-color: $modal-header-border-color !global; // var(--#{$prefix}border-color)
     // $modal-header-border-width: $modal-content-border-width; $modal-header-border-width: $modal-header-border-width !global; // $modal-content-border-width
-    // $modal-footer-border-width: $modal-header-border-width; $modal-footer-border-width: $modal-footer-border-width !global; // $modal-header-border-width
     // $modal-header-padding-y: $modal-inner-padding; $modal-header-padding-y: $modal-header-padding-y !global; // $modal-inner-padding
     // $modal-header-padding-x: $modal-inner-padding; $modal-header-padding-x: $modal-header-padding-x !global; // $modal-inner-padding
     // $modal-header-padding: $modal-header-padding-y $modal-header-padding-x; $modal-header-padding: $modal-header-padding !global; // $modal-header-padding-y $modal-header-padding-x // Keep this for backwards compatibility
+
+    // $modal-footer-bg: null; $modal-footer-bg: $modal-footer-bg !global; // null
+    // $modal-footer-border-color: $modal-header-border-color; $modal-footer-border-color: $modal-footer-border-color !global; // $modal-header-border-color
+    // $modal-footer-border-width: $modal-header-border-width; $modal-footer-border-width: $modal-footer-border-width !global; // $modal-header-border-width
 
     // $modal-sm: 300px; $modal-sm: $modal-sm !global; // 300px
     // $modal-md: 500px; $modal-md: $modal-md !global; // 500px
@@ -1464,7 +1454,7 @@
     // $thumbnail-padding: .25rem; $thumbnail-padding: $thumbnail-padding !global; // .25rem
     // $thumbnail-bg: $body-bg; $thumbnail-bg: $thumbnail-bg !global; // $body-bg
     // $thumbnail-border-width: $border-width; $thumbnail-border-width: $thumbnail-border-width !global; // $border-width
-    // $thumbnail-border-color: $gray-300; $thumbnail-border-color: $thumbnail-border-color !global; // $gray-300
+    // $thumbnail-border-color: var(--#{$prefix}border-color); $thumbnail-border-color: $thumbnail-border-color !global; // var(--#{$prefix}border-color)
     // $thumbnail-border-radius: $border-radius; $thumbnail-border-radius: $thumbnail-border-radius !global; // $border-radius
     // $thumbnail-box-shadow: $box-shadow-sm; $thumbnail-box-shadow: $thumbnail-box-shadow !global; // $box-shadow-sm
 
@@ -1544,7 +1534,7 @@
     // $btn-close-padding-x: .25em; $btn-close-padding-x: $btn-close-padding-x !global; // .25em
     // $btn-close-padding-y: $btn-close-padding-x; $btn-close-padding-y: $btn-close-padding-y !global; // $btn-close-padding-x
     // $btn-close-color: $black; $btn-close-color: $btn-close-color !global; // $black
-    // $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>"); $btn-close-bg: $btn-close-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>")
+    // $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"); $btn-close-bg: $btn-close-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>")
     // $btn-close-focus-shadow: $input-btn-focus-box-shadow; $btn-close-focus-shadow: $btn-close-focus-shadow !global; // $input-btn-focus-box-shadow
     // $btn-close-opacity: .5; $btn-close-opacity: $btn-close-opacity !global; // .5
     // $btn-close-hover-opacity: .75; $btn-close-hover-opacity: $btn-close-hover-opacity !global; // .75
@@ -1573,11 +1563,12 @@
     // $code-font-size: $small-font-size; $code-font-size: $code-font-size !global; // $small-font-size
     // $code-color: $pink; $code-color: $code-color !global; // $pink
 
-    // $kbd-padding-y: .2rem; $kbd-padding-y: $kbd-padding-y !global; // .2rem
-    // $kbd-padding-x: .4rem; $kbd-padding-x: $kbd-padding-x !global; // .4rem
+    // $kbd-padding-y: .1875rem; $kbd-padding-y: $kbd-padding-y !global; // .1875rem
+    // $kbd-padding-x: .375rem; $kbd-padding-x: $kbd-padding-x !global; // .375rem
     // $kbd-font-size: $code-font-size; $kbd-font-size: $kbd-font-size !global; // $code-font-size
-    // $kbd-color: $white; $kbd-color: $kbd-color !global; // $white
-    // $kbd-bg: $gray-900; $kbd-bg: $kbd-bg !global; // $gray-900
+    // $kbd-color: var(--#{$prefix}body-bg); $kbd-color: $kbd-color !global; // var(--#{$prefix}body-bg)
+    // $kbd-bg: var(--#{$prefix}body-color); $kbd-bg: $kbd-bg !global; // var(--#{$prefix}body-color)
+    // $nested-kbd-font-weight: null; $nested-kbd-font-weight: $nested-kbd-font-weight !global; // null // Deprecated in v5.2.0, removing in v6
 
     // $pre-color: null; $pre-color: $pre-color !global; // null
 }

@@ -14,19 +14,16 @@
 *   3. Bootstrap + CSS for customization of Bootstrap's components not possible with variables.
 */
 
-/*!
- * Bootstrap v5.1.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+@import "../../node_modules/bootstrap/scss/mixins/banner";
+@include bsBanner("");
 
 // Configuration
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/maps';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import '../../node_modules/bootstrap/scss/utilities';
-//@import 'utilities'; // For utilities API (see https://getbootstrap.com/docs/5.1/utilities/api/#using-the-api)
+//@import 'utilities'; // For utilities API (see https://getbootstrap.com/docs/5.2/utilities/api/#using-the-api)
 
 // Layout & components and their customizations
 @import '../../node_modules/bootstrap/scss/root';
