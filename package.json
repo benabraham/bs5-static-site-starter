@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/benabraham/bs5-static-site-starter"
@@ -27,9 +27,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp develop",
-    "build": "gulp build",
-    "deploy": "gulp build && surge dist --domain \"https://my-first-bootstrap-5-website.surge.sh\""
+    "start": "browserslist --update-db && gulp develop",
+    "build": "browserslist --update-db && gulp build",
+    "deploy": "browserslist --update-db && gulp build && surge dist --domain \"https://my-first-bootstrap-5-website.surge.sh\""
   },
   "prettier": {
     "tabWidth": 4,
