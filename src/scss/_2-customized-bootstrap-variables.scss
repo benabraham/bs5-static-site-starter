@@ -35,7 +35,7 @@
     @import "./node_modules/bootstrap/scss/variables";
 
     // Working examples (feel free to delete them):
-    $link-decoration: underline !global;
+    $paragraph-margin-bottom: 1.5rem !global;
 
     $gray-700: lighten($black, 34%) !global; // this will affect all colors defined by $gray-700 variables
 }
