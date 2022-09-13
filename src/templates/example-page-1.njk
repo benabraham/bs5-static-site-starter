@@ -6,19 +6,19 @@
 
 {% block content %}
     <div class="container">
+        <h1>Example page 1</h1>
+        <p>This page features images in different formats.</p>
+        <p>Back to the <a href="/">homepage</a></p>
+        <p>Or see more at <a href="/example-page-2" class="btn btn-danger btn-lg">Example page 2</a></p>
         <div class="row">
-            <div class="col">
+            <div class="col-lg">
                 <img class="img-fluid" src="/img/dummy.png" alt="dummy image in png format"/>
             </div>
-            <div class="col p-4">
-                <h1>Example page 1</h1>
-                <p>This page features 2 images in different formats.</p>
-                <p>Back to the <a href="/">homepage</a></p>
-                <p>Or see more at <a href="/example-page-2" class="btn btn-danger btn-lg">Example page 2</a></p>
-            </div>
-
-            <div class="col">
+            <div class="col-lg">
                 <img class="img-fluid" src="/img/dummy.jpg" alt="dummy image in jpg format"/>
+            </div>
+            <div class="col-lg">
+                <img class="img-fluid" src="/svg/dummy.svg" alt="dummy image in SVG format"/>
             </div>
         </div>
     </div>
