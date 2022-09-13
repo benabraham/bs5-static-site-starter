@@ -1096,22 +1096,21 @@
     // $navbar-toggler-focus-width: $btn-focus-width; $navbar-toggler-focus-width: $navbar-toggler-focus-width !global; // $btn-focus-width
     // $navbar-toggler-transition: box-shadow .15s ease-in-out; $navbar-toggler-transition: $navbar-toggler-transition !global; // box-shadow .15s ease-in-out
 
-    // $navbar-dark-color: rgba($white, .55); $navbar-dark-color: $navbar-dark-color !global; // rgba($white, .55)
-    // $navbar-dark-hover-color: rgba($white, .75); $navbar-dark-hover-color: $navbar-dark-hover-color !global; // rgba($white, .75)
-    // $navbar-dark-active-color: $white; $navbar-dark-active-color: $navbar-dark-active-color !global; // $white
-    // $navbar-dark-disabled-color: rgba($white, .25); $navbar-dark-disabled-color: $navbar-dark-disabled-color !global; // rgba($white, .25)
-    // $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); $navbar-dark-toggler-icon-bg: $navbar-dark-toggler-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
-    // $navbar-dark-toggler-border-color: rgba($white, .1); $navbar-dark-toggler-border-color: $navbar-dark-toggler-border-color !global; // rgba($white, .1)
-
     // $navbar-light-color: rgba($black, .55); $navbar-light-color: $navbar-light-color !global; // rgba($black, .55)
     // $navbar-light-hover-color: rgba($black, .7); $navbar-light-hover-color: $navbar-light-hover-color !global; // rgba($black, .7)
     // $navbar-light-active-color: rgba($black, .9); $navbar-light-active-color: $navbar-light-active-color !global; // rgba($black, .9)
     // $navbar-light-disabled-color: rgba($black, .3); $navbar-light-disabled-color: $navbar-light-disabled-color !global; // rgba($black, .3)
     // $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); $navbar-light-toggler-icon-bg: $navbar-light-toggler-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
     // $navbar-light-toggler-border-color: rgba($black, .1); $navbar-light-toggler-border-color: $navbar-light-toggler-border-color !global; // rgba($black, .1)
-
     // $navbar-light-brand-color: $navbar-light-active-color; $navbar-light-brand-color: $navbar-light-brand-color !global; // $navbar-light-active-color
     // $navbar-light-brand-hover-color: $navbar-light-active-color; $navbar-light-brand-hover-color: $navbar-light-brand-hover-color !global; // $navbar-light-active-color
+
+    // $navbar-dark-color: rgba($white, .55); $navbar-dark-color: $navbar-dark-color !global; // rgba($white, .55)
+    // $navbar-dark-hover-color: rgba($white, .75); $navbar-dark-hover-color: $navbar-dark-hover-color !global; // rgba($white, .75)
+    // $navbar-dark-active-color: $white; $navbar-dark-active-color: $navbar-dark-active-color !global; // $white
+    // $navbar-dark-disabled-color: rgba($white, .25); $navbar-dark-disabled-color: $navbar-dark-disabled-color !global; // rgba($white, .25)
+    // $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); $navbar-dark-toggler-icon-bg: $navbar-dark-toggler-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+    // $navbar-dark-toggler-border-color: rgba($white, .1); $navbar-dark-toggler-border-color: $navbar-dark-toggler-border-color !global; // rgba($white, .1)
     // $navbar-dark-brand-color: $navbar-dark-active-color; $navbar-dark-brand-color: $navbar-dark-brand-color !global; // $navbar-dark-active-color
     // $navbar-dark-brand-hover-color: $navbar-dark-active-color; $navbar-dark-brand-hover-color: $navbar-dark-brand-hover-color !global; // $navbar-dark-active-color
 
@@ -1303,7 +1302,7 @@
 
     // $popover-header-font-size: $font-size-base; $popover-header-font-size: $popover-header-font-size !global; // $font-size-base
     // $popover-header-bg: shade-color($popover-bg, 6%); $popover-header-bg: $popover-header-bg !global; // shade-color($popover-bg, 6%)
-    // $popover-header-color: var(--#{$prefix}heading-color); $popover-header-color: $popover-header-color !global; // var(--#{$prefix}heading-color)
+    // $popover-header-color: $headings-color; $popover-header-color: $popover-header-color !global; // $headings-color
     // $popover-header-padding-y: .5rem; $popover-header-padding-y: $popover-header-padding-y !global; // .5rem
     // $popover-header-padding-x: $spacer; $popover-header-padding-x: $popover-header-padding-x !global; // $spacer
 
