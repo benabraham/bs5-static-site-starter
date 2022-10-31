@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "autoprefixer": "^10.4.9",
+    "autoprefixer": "^10.4.13",
     "bootstrap": "^5.2.2",
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
@@ -18,10 +18,10 @@
     "gulp-nunjucks": "^5.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.18",
     "postcss-uncss": "^0.17.0",
     "prettier": "2.7.1",
-    "sass": "^1.54.9",
+    "sass": "^1.55.0",
     "surge": "^0.23.1",
     "uncss": "^0.17.3"
   },
