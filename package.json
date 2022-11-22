@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "1.3.0",
+  "version": "1.4.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/benabraham/bs5-static-site-starter"
@@ -8,7 +8,7 @@
   "main": "index.js",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
     "esm": "^3.2.25",
@@ -18,10 +18,10 @@
     "gulp-nunjucks": "^5.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.19",
     "postcss-uncss": "^0.17.0",
     "prettier": "2.7.1",
-    "sass": "^1.55.0",
+    "sass": "^1.56.1",
     "surge": "^0.23.1",
     "uncss": "^0.17.3"
   },
