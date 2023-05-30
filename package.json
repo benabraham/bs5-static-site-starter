@@ -7,21 +7,21 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "bootstrap": "^5.2.3",
-    "browser-sync": "^2.27.10",
+    "browser-sync": "^2.29.3",
     "del": "^6.1.1",
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
-    "gulp-dart-sass": "^1.0.2",
+    "gulp-dart-sass": "^1.1.0",
     "gulp-nunjucks": "^5.1.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.24",
     "postcss-uncss": "^0.17.0",
-    "prettier": "2.8.1",
-    "sass": "^1.57.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
     "surge": "^0.23.1",
     "uncss": "^0.17.3"
   },
@@ -56,5 +56,8 @@
     "iOS >= 12",
     "Safari >= 12",
     "not Explorer <= 11"
-  ]
+  ],
+  "dependencies": {
+    "autoprefix": "^1.0.1"
+  }
 }
