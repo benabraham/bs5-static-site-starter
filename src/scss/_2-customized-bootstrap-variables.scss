@@ -33,6 +33,7 @@
 %custom-bootstrap-variables {
     @import "./node_modules/bootstrap/scss/functions";
     @import "./node_modules/bootstrap/scss/variables";
+    @import "./node_modules/bootstrap/scss/variables-dark";
 
     // Working examples (feel free to delete them):
     $paragraph-margin-bottom: 1.5rem !global;
