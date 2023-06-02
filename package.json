@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "author": "Daniel Srb",
   "license": "MIT",
   "description": "A basic template to start a website based on Bootstrap 5",
@@ -23,7 +23,6 @@
     "bootstrap": "^5.3.0",
     "browser-sync": "^2.29.3",
     "del": "^7.0.0",
-    "esm": "^3.2.25",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-dart-sass": "^1.1.0",
@@ -36,9 +35,6 @@
     "sass": "^1.62.1",
     "surge": "^0.23.1",
     "uncss": "^0.17.3"
-  },
-  "dependencies": {
-    "autoprefix": "^1.0.1"
   },
   "prettier": {
     "tabWidth": 4,
