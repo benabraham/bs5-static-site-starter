@@ -1,18 +1,17 @@
 // FIRST LOAD EVERYTHING NEEDED…
-import gulp from "gulp";
-import fs from "fs";
+import { readFileSync } from "fs";
 import { deleteAsync } from "del";
+import { compile as nunjucksCompile } from "gulp-nunjucks";
+import gulp from "gulp";
+const { series, parallel, src, dest, watch } = gulp;
 import sass from "gulp-dart-sass";
 import sourcemaps from "gulp-sourcemaps";
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import uncss from "postcss-uncss";
 import csso from "gulp-csso";
-import nunjucks from "gulp-nunjucks";
 import browserSync from "browser-sync";
 
-const { series, parallel, src, dest, watch } = gulp;
-const { readFileSync } = fs;
 const browserSyncInstance = browserSync.create();
 
 // DEFINE FUNCTIONS
@@ -45,7 +44,7 @@ const cleanupStatic = () =>
 const htmlCompile = () =>
     src("src/templates/**/[^_]*.njk")
         // import data from data.json
-        .pipe(nunjucks.compile(JSON.parse(String(readFileSync("src/data.json")))))
+        .pipe(nunjucksCompile(JSON.parse(String(readFileSync("src/data.json")))))
         .pipe(dest("./dist/")); // put compiled html into dist folder
 
 // create and process CSS
