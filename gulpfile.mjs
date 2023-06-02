@@ -1,32 +1,35 @@
 // FIRST LOAD EVERYTHING NEEDED…
-const { series, parallel, src, dest, watch } = require("gulp"),
-    { readFileSync } = require("fs"),
-    del = require("del"),
-    sass = require("gulp-dart-sass"),
-    sourcemaps = require("gulp-sourcemaps"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    uncss = require("postcss-uncss"),
-    csso = require("gulp-csso"),
-    nunjucks = require("gulp-nunjucks"),
-    browserSync = require("browser-sync").create();
+import { readFileSync } from "fs";
+import { deleteAsync } from "del";
+import { compile as nunjucksCompile } from "gulp-nunjucks";
+import gulp from "gulp";
+const { series, parallel, src, dest, watch } = gulp;
+import sass from "gulp-dart-sass";
+import sourcemaps from "gulp-sourcemaps";
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
+import uncss from "postcss-uncss";
+import csso from "gulp-csso";
+import browserSync from "browser-sync";
+
+const browserSyncInstance = browserSync.create();
 
 // DEFINE FUNCTIONS
 
 // 1) functions to delete parts of generated files in dist folder
 
 // delete all files
-const allCleanup = () => del("dist/**/*");
+const cleanupAll = () => deleteAsync("dist/**/*");
 
 // delete all HTML files
-const htmlCleanup = () => del("dist/**/*.html");
+const cleanupHtml = () => deleteAsync("dist/**/*.html");
 
 // delete all CSS files and their sourcemaps
-const cssCleanup = () => del("dist/*.{css,css.map}");
+const cleanupCss = () => deleteAsync("dist/*.{css,css.map}");
 
 // delete static files
-const staticCleanup = () =>
-    del(
+const cleanupStatic = () =>
+    deleteAsync(
         [
             "dist/**/*", // delete all files from /dist/
             "!dist/**/*.{html,css,css.map}", // except HTML, CSS and CSS map files
@@ -37,10 +40,11 @@ const staticCleanup = () =>
 // 2) functions that generate files
 
 // compile Nunjucks templates to html files
+
 const htmlCompile = () =>
     src("src/templates/**/[^_]*.njk")
         // import data from data.json
-        .pipe(nunjucks.compile(JSON.parse(String(readFileSync("src/data.json")))))
+        .pipe(nunjucksCompile(JSON.parse(String(readFileSync("src/data.json")))))
         .pipe(dest("./dist/")); // put compiled html into dist folder
 
 // create and process CSS
@@ -59,11 +63,11 @@ const sassCompile = () =>
         .pipe(csso()) // compresses CSS
         .pipe(sourcemaps.write("./")) // writes the sourcemap
         .pipe(dest("./dist")) // destination of the resulting CSS
-        .pipe(browserSync.stream()); // tell browsersync to inject compiled CSS
+        .pipe(browserSyncInstance.stream()); // tell browsersync to inject compiled CSS
 
 // remove unused CSS (classes not used in generated HTML)
 const removeUnusedCss = () =>
-    src("dist/index.css")
+    src("dist/index.css", { allowEmpty: true })
         .pipe(
             postcss([
                 uncss({
@@ -81,7 +85,7 @@ const copyStatic = () => src("src/static/**/*").pipe(dest("dist"));
 // 3) functions to watch and serve
 // development with automatic refreshing after changes to CSS, templates or static files
 const startBrowsersync = () =>
-    browserSync.init({
+    browserSyncInstance.init({
         // initalize Browsersync
         // port: 8080, // set different port
         // open: false, // don’t open browser
@@ -100,7 +104,7 @@ const startBrowsersync = () =>
 
 // a function to reload Browsersync
 const reloadBrowserSync = (cb) => {
-    browserSync.reload();
+    browserSyncInstance.reload();
     cb();
 };
 
@@ -116,25 +120,25 @@ const watchFiles = () => {
 
 // COMPOSE TASKS
 
-const processHtml = series(htmlCleanup, htmlCompile);
+const processHtml = series(cleanupHtml, htmlCompile);
 
-const processCss = series(cssCleanup, sassCompile);
+const processCss = series(cleanupCss, sassCompile);
 
-const processStatic = series(staticCleanup, copyStatic);
+const processStatic = series(cleanupStatic, copyStatic);
 
 // EXPORT PUBLICLY AVAILABLE TASKS
 // These tasks can be run with `npx gulp TASKNAME` on command line for example `npx gulp develop`.
 // We use them in npm scripts with `gulp TASKNAME` (see package.json).
 
 // development with automatic refreshing
-exports.develop = series(
-    allCleanup,
+export const develop = series(
+    cleanupAll,
     parallel(htmlCompile, sassCompile, copyStatic),
     parallel(startBrowsersync, watchFiles)
 );
 
 // build everything for production
-exports.build = series(allCleanup, htmlCompile, parallel(sassCompile, copyStatic), removeUnusedCss);
+export const build = series(cleanupAll, htmlCompile, parallel(sassCompile, copyStatic), removeUnusedCss);
 
 // the default task runs when you run just `gulp`
-exports.default = exports.develop;
+export default build;
