@@ -40,7 +40,6 @@ const cleanupStatic = () =>
 // 2) functions that generate files
 
 // compile Nunjucks templates to html files
-
 const htmlCompile = () =>
     src("src/templates/**/[^_]*.njk")
         // import data from data.json
