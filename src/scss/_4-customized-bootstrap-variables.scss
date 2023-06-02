@@ -510,7 +510,6 @@
 
     // $paragraph-margin-bottom: 1rem; $paragraph-margin-bottom: $paragraph-margin-bottom !global; // 1rem
 
-
     // Grid breakpoints
     //
     // Define the minimum dimensions at which your layout will change,
@@ -551,7 +550,6 @@
     // Container padding
 
     // $container-padding-x: $grid-gutter-width; $container-padding-x: $container-padding-x !global; // $grid-gutter-width
-
 
     // Components
     //
@@ -723,7 +721,6 @@
     // $mark-padding: .1875em; $mark-padding: $mark-padding !global; // .1875em
     // $mark-bg: $yellow-100; $mark-bg: $mark-bg !global; // $yellow-100
 
-
     // Tables
     //
     // Customizes the `.table` component with basic values, each used across all table variations.
@@ -805,7 +802,6 @@
 
     // $input-btn-border-width: var(--#{$prefix}border-width); $input-btn-border-width: $input-btn-border-width !global; // var(--#{$prefix}border-width)
 
-
     // Buttons
     //
     // For each of Bootstrap's buttons, define text, background, and border color.
@@ -854,7 +850,6 @@
     // $btn-active-bg-tint-amount: 20%; $btn-active-bg-tint-amount: $btn-active-bg-tint-amount !global; // 20%
     // $btn-active-border-shade-amount: 25%; $btn-active-border-shade-amount: $btn-active-border-shade-amount !global; // 25%
     // $btn-active-border-tint-amount: 10%; $btn-active-border-tint-amount: $btn-active-border-tint-amount !global; // 10%
-
 
     // Forms
 
@@ -1118,7 +1113,6 @@
     ); $zindex-levels: $zindex-levels !global;
     */
 
-
     // Navs
 
     // $nav-link-padding-y: .5rem; $nav-link-padding-y: $nav-link-padding-y !global; // .5rem
@@ -1146,7 +1140,6 @@
     // $nav-underline-gap: 1rem; $nav-underline-gap: $nav-underline-gap !global; // 1rem
     // $nav-underline-border-width: .125rem; $nav-underline-border-width: $nav-underline-border-width !global; // .125rem
     // $nav-underline-link-active-color: var(--#{$prefix}emphasis-color); $nav-underline-link-active-color: $nav-underline-link-active-color !global; // var(--#{$prefix}emphasis-color)
-
 
     // Navbar
 
@@ -1187,7 +1180,6 @@
     // $navbar-dark-toggler-border-color: rgba($white, .1); $navbar-dark-toggler-border-color: $navbar-dark-toggler-border-color !global; // rgba($white, .1)
     // $navbar-dark-brand-color: $navbar-dark-active-color; $navbar-dark-brand-color: $navbar-dark-brand-color !global; // $navbar-dark-active-color
     // $navbar-dark-brand-hover-color: $navbar-dark-active-color; $navbar-dark-brand-hover-color: $navbar-dark-brand-hover-color !global; // $navbar-dark-active-color
-
 
     // Dropdowns
     //
@@ -1238,7 +1230,6 @@
     // $dropdown-dark-link-disabled-color: $gray-500; $dropdown-dark-link-disabled-color: $dropdown-dark-link-disabled-color !global; // $gray-500
     // $dropdown-dark-header-color: $gray-500; $dropdown-dark-header-color: $dropdown-dark-header-color !global; // $gray-500
 
-
     // Pagination
 
     // $pagination-padding-y: .375rem; $pagination-padding-y: $pagination-padding-y !global; // .375rem
@@ -1278,7 +1269,6 @@
 
     // $pagination-border-radius-sm: var(--#{$prefix}border-radius-sm); $pagination-border-radius-sm: $pagination-border-radius-sm !global; // var(--#{$prefix}border-radius-sm)
     // $pagination-border-radius-lg: var(--#{$prefix}border-radius-lg); $pagination-border-radius-lg: $pagination-border-radius-lg !global; // var(--#{$prefix}border-radius-lg)
-
 
     // Placeholders
 
@@ -1365,7 +1355,6 @@
     // $form-feedback-tooltip-opacity: $tooltip-opacity; $form-feedback-tooltip-opacity: $form-feedback-tooltip-opacity !global; // $tooltip-opacity
     // $form-feedback-tooltip-border-radius: $tooltip-border-radius; $form-feedback-tooltip-border-radius: $form-feedback-tooltip-border-radius !global; // $tooltip-border-radius
 
-
     // Popovers
 
     // $popover-font-size: $font-size-sm; $popover-font-size: $popover-font-size !global; // $font-size-sm
@@ -1394,7 +1383,6 @@
     // $popover-arrow-color: $popover-bg; $popover-arrow-color: $popover-arrow-color !global; // $popover-bg
     // $popover-arrow-outer-color: var(--#{$prefix}border-color-translucent); $popover-arrow-outer-color: $popover-arrow-outer-color !global; // var(--#{$prefix}border-color-translucent)
 
-
     // Toasts
 
     // $toast-max-width: 350px; $toast-max-width: $toast-max-width !global; // 350px
@@ -1413,7 +1401,6 @@
     // $toast-header-background-color: rgba(var(--#{$prefix}body-bg-rgb), .85); $toast-header-background-color: $toast-header-background-color !global; // rgba(var(--#{$prefix}body-bg-rgb), .85)
     // $toast-header-border-color: $toast-border-color; $toast-header-border-color: $toast-header-border-color !global; // $toast-border-color
 
-
     // Badges
 
     // $badge-font-size: .75em; $badge-font-size: $badge-font-size !global; // .75em
@@ -1422,7 +1409,6 @@
     // $badge-padding-y: .35em; $badge-padding-y: $badge-padding-y !global; // .35em
     // $badge-padding-x: .65em; $badge-padding-x: $badge-padding-x !global; // .65em
     // $badge-border-radius: var(--#{$prefix}border-radius); $badge-border-radius: $badge-border-radius !global; // var(--#{$prefix}border-radius)
-
 
     // Modals
 
@@ -1467,7 +1453,6 @@
     // $modal-transition: transform .3s ease-out; $modal-transition: $modal-transition !global; // transform .3s ease-out
     // $modal-scale-transform: scale(1.02); $modal-scale-transform: $modal-scale-transform !global; // scale(1.02)
 
-
     // Alerts
     //
     // Define alert colors, border radius, and padding.
@@ -1499,7 +1484,6 @@
     // $progress-bar-animation-timing: 1s linear infinite; $progress-bar-animation-timing: $progress-bar-animation-timing !global; // 1s linear infinite
     // $progress-bar-transition: width .6s ease; $progress-bar-transition: $progress-bar-transition !global; // width .6s ease
 
-
     // List group
 
     // $list-group-color: var(--#{$prefix}body-color); $list-group-color: $list-group-color !global; // var(--#{$prefix}body-color)
@@ -1527,7 +1511,6 @@
     // $list-group-action-active-color: var(--#{$prefix}body-color); $list-group-action-active-color: $list-group-action-active-color !global; // var(--#{$prefix}body-color)
     // $list-group-action-active-bg: var(--#{$prefix}secondary-bg); $list-group-action-active-bg: $list-group-action-active-bg !global; // var(--#{$prefix}secondary-bg)
 
-
     // Image thumbnails
 
     // $thumbnail-padding: .25rem; $thumbnail-padding: $thumbnail-padding !global; // .25rem
@@ -1537,12 +1520,10 @@
     // $thumbnail-border-radius: var(--#{$prefix}border-radius); $thumbnail-border-radius: $thumbnail-border-radius !global; // var(--#{$prefix}border-radius)
     // $thumbnail-box-shadow: var(--#{$prefix}box-shadow-sm); $thumbnail-box-shadow: $thumbnail-box-shadow !global; // var(--#{$prefix}box-shadow-sm)
 
-
     // Figures
 
     // $figure-caption-font-size: $small-font-size; $figure-caption-font-size: $figure-caption-font-size !global; // $small-font-size
     // $figure-caption-color: var(--#{$prefix}secondary-color); $figure-caption-color: $figure-caption-color !global; // var(--#{$prefix}secondary-color)
-
 
     // Breadcrumbs
 
@@ -1592,7 +1573,6 @@
     // $carousel-dark-caption-color: $black; $carousel-dark-caption-color: $carousel-dark-caption-color !global; // $black
     // $carousel-dark-control-icon-filter: invert(1) grayscale(100); $carousel-dark-control-icon-filter: $carousel-dark-control-icon-filter !global; // invert(1) grayscale(100)
 
-
     // Spinners
 
     // $spinner-width: 2rem; $spinner-width: $spinner-width !global; // 2rem
@@ -1604,7 +1584,6 @@
     // $spinner-width-sm: 1rem; $spinner-width-sm: $spinner-width-sm !global; // 1rem
     // $spinner-height-sm: $spinner-width-sm; $spinner-height-sm: $spinner-height-sm !global; // $spinner-width-sm
     // $spinner-border-width-sm: .2em; $spinner-border-width-sm: $spinner-border-width-sm !global; // .2em
-
 
     // Close
 
@@ -1620,7 +1599,6 @@
     // $btn-close-focus-opacity: 1; $btn-close-focus-opacity: $btn-close-focus-opacity !global; // 1
     // $btn-close-disabled-opacity: .25; $btn-close-disabled-opacity: $btn-close-disabled-opacity !global; // .25
     // $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%); $btn-close-white-filter: $btn-close-white-filter !global; // invert(1) grayscale(100%) brightness(200%)
-
 
     // Offcanvas
 
