@@ -602,8 +602,6 @@
     // $transition-collapse: height .35s ease; $transition-collapse: $transition-collapse !global; // height .35s ease
     // $transition-collapse-width: width .35s ease; $transition-collapse-width: $transition-collapse-width !global; // width .35s ease
 
-    // stylelint-disable function-disallowed-list
-
     /*
     $aspect-ratios: (
         "1x1": 100%,
@@ -617,7 +615,6 @@
     //
     // Font, line-height, and color for body text, headings, and more.
 
-    // stylelint-disable value-keyword-case
     // $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $font-family-sans-serif: $font-family-sans-serif !global; // system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
     // $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; $font-family-monospace: $font-family-monospace !global; // SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
     // $font-family-base: var(--#{$prefix}font-sans-serif); $font-family-base: $font-family-base !global; // var(--#{$prefix}font-sans-serif)
@@ -903,7 +900,7 @@
     // $input-placeholder-color: var(--#{$prefix}secondary-color); $input-placeholder-color: $input-placeholder-color !global; // var(--#{$prefix}secondary-color)
     // $input-plaintext-color: var(--#{$prefix}body-color); $input-plaintext-color: $input-plaintext-color !global; // var(--#{$prefix}body-color)
 
-    // $input-height-border: calc(#{$input-border-width} * 2); $input-height-border: $input-height-border !global; // calc(#{$input-border-width} * 2) // stylelint-disable-line function-disallowed-list
+    // $input-height-border: calc(#{$input-border-width} * 2); $input-height-border: $input-height-border !global; // calc(#{$input-border-width} * 2)
 
     // $input-height-inner: add($input-line-height * 1em, $input-padding-y * 2); $input-height-inner: $input-height-inner !global; // add($input-line-height * 1em, $input-padding-y * 2)
     // $input-height-inner-half: add($input-line-height * .5em, $input-padding-y); $input-height-inner-half: $input-height-inner-half !global; // add($input-line-height * .5em, $input-padding-y)
@@ -1195,7 +1192,7 @@
     // $dropdown-border-color: var(--#{$prefix}border-color-translucent); $dropdown-border-color: $dropdown-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $dropdown-border-radius: var(--#{$prefix}border-radius); $dropdown-border-radius: $dropdown-border-radius !global; // var(--#{$prefix}border-radius)
     // $dropdown-border-width: var(--#{$prefix}border-width); $dropdown-border-width: $dropdown-border-width !global; // var(--#{$prefix}border-width)
-    // $dropdown-inner-border-radius: calc(#{$dropdown-border-radius} - #{$dropdown-border-width}); $dropdown-inner-border-radius: $dropdown-inner-border-radius !global; // calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) // stylelint-disable-line function-disallowed-list
+    // $dropdown-inner-border-radius: calc(#{$dropdown-border-radius} - #{$dropdown-border-width}); $dropdown-inner-border-radius: $dropdown-inner-border-radius !global; // calc(#{$dropdown-border-radius} - #{$dropdown-border-width})
     // $dropdown-divider-bg: $dropdown-border-color; $dropdown-divider-bg: $dropdown-divider-bg !global; // $dropdown-border-color
     // $dropdown-divider-margin-y: $spacer * .5; $dropdown-divider-margin-y: $dropdown-divider-margin-y !global; // $spacer * .5
     // $dropdown-box-shadow: $box-shadow; $dropdown-box-shadow: $dropdown-box-shadow !global; // $box-shadow
@@ -1245,7 +1242,7 @@
     // $pagination-bg: var(--#{$prefix}body-bg); $pagination-bg: $pagination-bg !global; // var(--#{$prefix}body-bg)
     // $pagination-border-radius: var(--#{$prefix}border-radius); $pagination-border-radius: $pagination-border-radius !global; // var(--#{$prefix}border-radius)
     // $pagination-border-width: var(--#{$prefix}border-width); $pagination-border-width: $pagination-border-width !global; // var(--#{$prefix}border-width)
-    // $pagination-margin-start: calc(#{$pagination-border-width} * -1); $pagination-margin-start: $pagination-margin-start !global; // calc(#{$pagination-border-width} * -1) // stylelint-disable-line function-disallowed-list
+    // $pagination-margin-start: calc(#{$pagination-border-width} * -1); $pagination-margin-start: $pagination-margin-start !global; // calc(#{$pagination-border-width} * -1)
     // $pagination-border-color: var(--#{$prefix}border-color); $pagination-border-color: $pagination-border-color !global; // var(--#{$prefix}border-color)
 
     // $pagination-focus-color: var(--#{$prefix}link-hover-color); $pagination-focus-color: $pagination-focus-color !global; // var(--#{$prefix}link-hover-color)
@@ -1363,7 +1360,7 @@
     // $popover-border-width: var(--#{$prefix}border-width); $popover-border-width: $popover-border-width !global; // var(--#{$prefix}border-width)
     // $popover-border-color: var(--#{$prefix}border-color-translucent); $popover-border-color: $popover-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $popover-border-radius: var(--#{$prefix}border-radius-lg); $popover-border-radius: $popover-border-radius !global; // var(--#{$prefix}border-radius-lg)
-    // $popover-inner-border-radius: calc(#{$popover-border-radius} - #{$popover-border-width}); $popover-inner-border-radius: $popover-inner-border-radius !global; // calc(#{$popover-border-radius} - #{$popover-border-width}) // stylelint-disable-line function-disallowed-list
+    // $popover-inner-border-radius: calc(#{$popover-border-radius} - #{$popover-border-width}); $popover-inner-border-radius: $popover-inner-border-radius !global; // calc(#{$popover-border-radius} - #{$popover-border-width})
     // $popover-box-shadow: $box-shadow; $popover-box-shadow: $popover-box-shadow !global; // $box-shadow
 
     // $popover-header-font-size: $font-size-base; $popover-header-font-size: $popover-header-font-size !global; // $font-size-base
