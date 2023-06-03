@@ -32,6 +32,8 @@
 // Please see _4-customized-bootstrap-variables.scss.
 // for a more practical version of this solution.
 
+@import "bootstrap-variables-init"; // init all variables so dart sass doesn’t throw deprecation warnings
+
 %custom-bootstrap-variables {
     @import "node_modules/bootstrap/scss/functions";
     @import "node_modules/bootstrap/scss/variables";
