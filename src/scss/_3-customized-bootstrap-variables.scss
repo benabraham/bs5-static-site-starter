@@ -33,9 +33,9 @@
 // for a more practical version of this solution.
 
 %custom-bootstrap-variables {
-    @import "./node_modules/bootstrap/scss/functions";
-    @import "./node_modules/bootstrap/scss/variables";
-    @import "./node_modules/bootstrap/scss/variables-dark";
+    @import "node_modules/bootstrap/scss/functions";
+    @import "node_modules/bootstrap/scss/variables";
+    @import "node_modules/bootstrap/scss/variables-dark";
 
     // Working examples (feel free to delete them):
     $paragraph-margin-bottom: 1.5rem; // local variable overridden
