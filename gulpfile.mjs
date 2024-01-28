@@ -1,7 +1,7 @@
 // FIRST LOAD EVERYTHING NEEDED…
 import { readFileSync } from "fs";
 import { deleteAsync } from "del";
-import { compile as nunjucksCompile } from "gulp-nunjucks";
+import { nunjucksCompile } from "gulp-nunjucks";
 import gulp from "gulp";
 const { series, parallel, src, dest, watch } = gulp;
 import sass from "gulp-dart-sass";
@@ -34,7 +34,7 @@ const cleanupStatic = () =>
             "dist/**/*", // delete all files from /dist/
             "!dist/**/*.{html,css,css.map}", // except HTML, CSS and CSS map files
         ],
-        { onlyFiles: true } // do not delete folders (would delete all folders otherwise)
+        { onlyFiles: true }, // do not delete folders (would delete all folders otherwise)
     );
 
 // 2) functions that generate files
@@ -57,7 +57,7 @@ const sassCompile = () =>
                 // see browserslist in package.json for included browsers
                 // Official Bootstrap browser support policy:
                 // https://getbootstrap.com/docs/5.3/getting-started/browsers-devices/#supported-browsers
-            ])
+            ]),
         )
         .pipe(csso()) // compresses CSS
         .pipe(sourcemaps.write("./")) // writes the sourcemap
@@ -74,7 +74,7 @@ const removeUnusedCss = () =>
                     media: ["print"], // process additional media queries
                     ignore: [], // provide a list of selectors that should not be removed by UnCSS
                 }),
-            ])
+            ]),
         )
         .pipe(dest("dist"));
 
@@ -133,7 +133,7 @@ const processStatic = series(cleanupStatic, copyStatic);
 export const develop = series(
     cleanupAll,
     parallel(htmlCompile, sassCompile, copyStatic),
-    parallel(startBrowsersync, watchFiles)
+    parallel(startBrowsersync, watchFiles),
 );
 
 // build everything for production

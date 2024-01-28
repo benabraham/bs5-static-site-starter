@@ -709,6 +709,8 @@
     // $hr-border-width: var(--#{$prefix}border-width); $hr-border-width: $hr-border-width !global; // var(--#{$prefix}border-width)
     // $hr-opacity: .25; $hr-opacity: $hr-opacity !global; // .25
 
+    // $vr-border-width: var(--#{$prefix}border-width); $vr-border-width: $vr-border-width !global; // var(--#{$prefix}border-width)
+
     // $legend-margin-bottom: .5rem; $legend-margin-bottom: $legend-margin-bottom !global; // .5rem
     // $legend-font-size: 1.5rem; $legend-font-size: $legend-font-size !global; // 1.5rem
     // $legend-font-weight: null; $legend-font-weight: $legend-font-weight !global; // null
@@ -718,6 +720,7 @@
     // $list-inline-padding: .5rem; $list-inline-padding: $list-inline-padding !global; // .5rem
 
     // $mark-padding: .1875em; $mark-padding: $mark-padding !global; // .1875em
+    // mark-color: $body-color; mark-color: mark-color !global; // $body-color
     // $mark-bg: $yellow-100; $mark-bg: $mark-bg !global; // $yellow-100
 
     // Tables
@@ -731,7 +734,7 @@
 
     // $table-cell-vertical-align: top; $table-cell-vertical-align: $table-cell-vertical-align !global; // top
 
-    // $table-color: var(--#{$prefix}body-color); $table-color: $table-color !global; // var(--#{$prefix}body-color)
+    // $table-color: var(--#{$prefix}emphasis); $table-color: $table-color !global; // var(--#{$prefix}emphasis)
     // $table-bg: var(--#{$prefix}body-bg); $table-bg: $table-bg !global; // var(--#{$prefix}body-bg)
     // $table-accent-bg: transparent; $table-accent-bg: $table-accent-bg !global; // transparent
 
@@ -739,15 +742,15 @@
 
     // $table-striped-color: $table-color; $table-striped-color: $table-striped-color !global; // $table-color
     // $table-striped-bg-factor: .05; $table-striped-bg-factor: $table-striped-bg-factor !global; // .05
-    // $table-striped-bg: rgba($black, $table-striped-bg-factor); $table-striped-bg: $table-striped-bg !global; // rgba($black, $table-striped-bg-factor)
+    // $table-striped-bg: rgba(var(--#{$prefix}emphasis-color-rgb, $table-striped-bg-factor); $table-striped-bg: $table-striped-bg !global; // rgba(var(--#{$prefix}emphasis-color-rgb, $table-striped-bg-factor)
 
     // $table-active-color: $table-color; $table-active-color: $table-active-color !global; // $table-color
     // $table-active-bg-factor: .1; $table-active-bg-factor: $table-active-bg-factor !global; // .1
-    // $table-active-bg: rgba($black, $table-active-bg-factor); $table-active-bg: $table-active-bg !global; // rgba($black, $table-active-bg-factor)
+    // $table-active-bg: rgba(var(--#{$prefix}emphasis-color-rgb, $table-active-bg-factor); $table-active-bg: $table-active-bg !global; // rgba(var(--#{$prefix}emphasis-color-rgb, $table-active-bg-factor)
 
     // $table-hover-color: $table-color; $table-hover-color: $table-hover-color !global; // $table-color
     // $table-hover-bg-factor: .075; $table-hover-bg-factor: $table-hover-bg-factor !global; // .075
-    // $table-hover-bg: rgba($black, $table-hover-bg-factor); $table-hover-bg: $table-hover-bg !global; // rgba($black, $table-hover-bg-factor)
+    // $table-hover-bg: rgba(var(--#{$prefix}emphasis-color-rgb, $table-hover-bg-factor); $table-hover-bg: $table-hover-bg !global; // rgba(var(--#{$prefix}emphasis-color-rgb, $table-hover-bg-factor)
 
     // $table-border-factor: .1; $table-border-factor: $table-border-factor !global; // .1
     // $table-border-width: var(--#{$prefix}border-width); $table-border-width: $table-border-width !global; // var(--#{$prefix}border-width)
@@ -887,7 +890,7 @@
     // $input-color: var(--#{$prefix}body-color); $input-color: $input-color !global; // var(--#{$prefix}body-color)
     // $input-border-color: var(--#{$prefix}border-color); $input-border-color: $input-border-color !global; // var(--#{$prefix}border-color)
     // $input-border-width: $input-btn-border-width; $input-border-width: $input-border-width !global; // $input-btn-border-width
-    // $input-box-shadow: $box-shadow-inset; $input-box-shadow: $input-box-shadow !global; // $box-shadow-inset
+    // $input-box-shadow: var(--#{$prefix}box-shadow-inset); $input-box-shadow: $input-box-shadow !global; // var(--#{$prefix}box-shadow-inset)
 
     // $input-border-radius: var(--#{$prefix}border-radius); $input-border-radius: $input-border-radius !global; // var(--#{$prefix}border-radius)
     // $input-border-radius-sm: var(--#{$prefix}border-radius-sm); $input-border-radius-sm: $input-border-radius-sm !global; // var(--#{$prefix}border-radius-sm)
@@ -995,7 +998,7 @@
     // $form-select-border-width: $input-border-width; $form-select-border-width: $form-select-border-width !global; // $input-border-width
     // $form-select-border-color: $input-border-color; $form-select-border-color: $form-select-border-color !global; // $input-border-color
     // $form-select-border-radius: $input-border-radius; $form-select-border-radius: $form-select-border-radius !global; // $input-border-radius
-    // $form-select-box-shadow: $box-shadow-inset; $form-select-box-shadow: $form-select-box-shadow !global; // $box-shadow-inset
+    // $form-select-box-shadow: var(--#{$prefix}box-shadow-inset); $form-select-box-shadow: $form-select-box-shadow !global; // var(--#{$prefix}box-shadow-inset)
 
     // $form-select-focus-border-color: $input-focus-border-color; $form-select-focus-border-color: $form-select-focus-border-color !global; // $input-focus-border-color
     // $form-select-focus-width: $input-focus-width; $form-select-focus-width: $form-select-focus-width !global; // $input-focus-width
@@ -1016,9 +1019,9 @@
     // $form-range-track-width: 100%; $form-range-track-width: $form-range-track-width !global; // 100%
     // $form-range-track-height: .5rem; $form-range-track-height: $form-range-track-height !global; // .5rem
     // $form-range-track-cursor: pointer; $form-range-track-cursor: $form-range-track-cursor !global; // pointer
-    // $form-range-track-bg: var(--#{$prefix}tertiary-bg); $form-range-track-bg: $form-range-track-bg !global; // var(--#{$prefix}tertiary-bg)
+    // $form-range-track-bg: var(--#{$prefix}secondary-bg); $form-range-track-bg: $form-range-track-bg !global; // var(--#{$prefix}secondary-bg)
     // $form-range-track-border-radius: 1rem; $form-range-track-border-radius: $form-range-track-border-radius !global; // 1rem
-    // $form-range-track-box-shadow: $box-shadow-inset; $form-range-track-box-shadow: $form-range-track-box-shadow !global; // $box-shadow-inset
+    // $form-range-track-box-shadow: var(--#{$prefix}box-shadow-inset); $form-range-track-box-shadow: $form-range-track-box-shadow !global; // var(--#{$prefix}box-shadow-inset)
 
     // $form-range-thumb-width: 1rem; $form-range-thumb-width: $form-range-thumb-width !global; // 1rem
     // $form-range-thumb-height: $form-range-thumb-width; $form-range-thumb-height: $form-range-thumb-height !global; // $form-range-thumb-width
@@ -1175,7 +1178,8 @@
     // $navbar-dark-hover-color: rgba($white, .75); $navbar-dark-hover-color: $navbar-dark-hover-color !global; // rgba($white, .75)
     // $navbar-dark-active-color: $white; $navbar-dark-active-color: $navbar-dark-active-color !global; // $white
     // $navbar-dark-disabled-color: rgba($white, .25); $navbar-dark-disabled-color: $navbar-dark-disabled-color !global; // rgba($white, .25)
-    // $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); $navbar-dark-toggler-icon-bg: $navbar-dark-toggler-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+    // $navbar-dark-icon-color: $navbar-dark-color; $navbar-dark-icon-color: $navbar-dark-icon-color !global; // $navbar-dark-color
+    // $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); $navbar-dark-toggler-icon-bg: $navbar-dark-toggler-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
     // $navbar-dark-toggler-border-color: rgba($white, .1); $navbar-dark-toggler-border-color: $navbar-dark-toggler-border-color !global; // rgba($white, .1)
     // $navbar-dark-brand-color: $navbar-dark-active-color; $navbar-dark-brand-color: $navbar-dark-brand-color !global; // $navbar-dark-active-color
     // $navbar-dark-brand-hover-color: $navbar-dark-active-color; $navbar-dark-brand-hover-color: $navbar-dark-brand-hover-color !global; // $navbar-dark-active-color
@@ -1197,7 +1201,7 @@
     // $dropdown-inner-border-radius: calc(#{$dropdown-border-radius} - #{$dropdown-border-width}); $dropdown-inner-border-radius: $dropdown-inner-border-radius !global; // calc(#{$dropdown-border-radius} - #{$dropdown-border-width})
     // $dropdown-divider-bg: $dropdown-border-color; $dropdown-divider-bg: $dropdown-divider-bg !global; // $dropdown-border-color
     // $dropdown-divider-margin-y: $spacer * .5; $dropdown-divider-margin-y: $dropdown-divider-margin-y !global; // $spacer * .5
-    // $dropdown-box-shadow: $box-shadow; $dropdown-box-shadow: $dropdown-box-shadow !global; // $box-shadow
+    // $dropdown-box-shadow: var(--#{$prefix}box-shadow); $dropdown-box-shadow: $dropdown-box-shadow !global; // var(--#{$prefix}box-shadow)
 
     // $dropdown-link-color: var(--#{$prefix}body-color); $dropdown-link-color: $dropdown-link-color !global; // var(--#{$prefix}body-color)
     // $dropdown-link-hover-color: $dropdown-link-color; $dropdown-link-hover-color: $dropdown-link-hover-color !global; // $dropdown-link-color
@@ -1363,7 +1367,7 @@
     // $popover-border-color: var(--#{$prefix}border-color-translucent); $popover-border-color: $popover-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $popover-border-radius: var(--#{$prefix}border-radius-lg); $popover-border-radius: $popover-border-radius !global; // var(--#{$prefix}border-radius-lg)
     // $popover-inner-border-radius: calc(#{$popover-border-radius} - #{$popover-border-width}); $popover-inner-border-radius: $popover-inner-border-radius !global; // calc(#{$popover-border-radius} - #{$popover-border-width})
-    // $popover-box-shadow: $box-shadow; $popover-box-shadow: $popover-box-shadow !global; // $box-shadow
+    // $popover-box-shadow: var(--#{$prefix}box-shadow); $popover-box-shadow: $popover-box-shadow !global; // var(--#{$prefix}box-shadow)
 
     // $popover-header-font-size: $font-size-base; $popover-header-font-size: $popover-header-font-size !global; // $font-size-base
     // $popover-header-bg: var(--#{$prefix}secondary-bg); $popover-header-bg: $popover-header-bg !global; // var(--#{$prefix}secondary-bg)
@@ -1426,8 +1430,8 @@
     // $modal-content-border-width: var(--#{$prefix}border-width); $modal-content-border-width: $modal-content-border-width !global; // var(--#{$prefix}border-width)
     // $modal-content-border-radius: var(--#{$prefix}border-radius-lg); $modal-content-border-radius: $modal-content-border-radius !global; // var(--#{$prefix}border-radius-lg)
     // $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width); $modal-content-inner-border-radius: $modal-content-inner-border-radius !global; // subtract($modal-content-border-radius, $modal-content-border-width)
-    // $modal-content-box-shadow-xs: $box-shadow-sm; $modal-content-box-shadow-xs: $modal-content-box-shadow-xs !global; // $box-shadow-sm
-    // $modal-content-box-shadow-sm-up: $box-shadow; $modal-content-box-shadow-sm-up: $modal-content-box-shadow-sm-up !global; // $box-shadow
+    // $modal-content-box-shadow-xs: var(--#{$prefix}box-shadow-sm); $modal-content-box-shadow-xs: $modal-content-box-shadow-xs !global; // var(--#{$prefix}box-shadow-sm)
+    // $modal-content-box-shadow-sm-up: var(--#{$prefix}box-shadow); $modal-content-box-shadow-sm-up: $modal-content-box-shadow-sm-up !global; // var(--#{$prefix}box-shadow)
 
     // $modal-backdrop-bg: $black; $modal-backdrop-bg: $modal-backdrop-bg !global; // $black
     // $modal-backdrop-opacity: .5; $modal-backdrop-opacity: $modal-backdrop-opacity !global; // .5
@@ -1466,10 +1470,6 @@
     // $alert-border-scale: -70%; $alert-border-scale: $alert-border-scale !global; // -70%
     // $alert-color-scale: 40%; $alert-color-scale: $alert-color-scale !global; // 40%
     // $alert-dismissible-padding-r: $alert-padding-x * 3; $alert-dismissible-padding-r: $alert-dismissible-padding-r !global; // $alert-padding-x * 3 // 3x covers width of x plus default padding on either side
-
-    // $alert-bg-scale: -80%; $alert-bg-scale: $alert-bg-scale !global; // -80% // Deprecated in v5.2.0, to be removed in v6
-    // $alert-border-scale: -70%; $alert-border-scale: $alert-border-scale !global; // -70% // Deprecated in v5.2.0, to be removed in v6
-    // $alert-color-scale: 40%; $alert-color-scale: $alert-color-scale !global; // 40% // Deprecated in v5.2.0, to be removed in v6
 
     // Progress bars
 
