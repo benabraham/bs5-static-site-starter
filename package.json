@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Daniel Srb",
   "license": "MIT",
   "description": "A basic template to start a website based on Bootstrap 5",
@@ -19,7 +19,7 @@
     "deploy": "npx update-browserslist-db@latest && gulp build && surge dist --domain \"https://my-first-bootstrap-5-website.surge.sh\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.19",
     "bootstrap": "^5.3.2",
     "browser-sync": "^3.0.2",
     "del": "^7.1.0",
@@ -29,10 +29,10 @@
     "gulp-nunjucks": "^6.0.0",
     "gulp-postcss": "^9.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.38",
     "postcss-uncss": "^0.17.0",
-    "prettier": "^3.2.4",
-    "sass": "^1.70.0",
+    "prettier": "3.3.2",
+    "sass": "^1.77.6",
     "surge": "^0.23.1",
     "uncss": "^0.17.3"
   },
