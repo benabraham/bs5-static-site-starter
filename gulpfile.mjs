@@ -79,7 +79,7 @@ const removeUnusedCss = () =>
         .pipe(dest("dist"));
 
 // copy all files from /src/static/ to /dist/static/
-const copyStatic = () => src("src/static/**/*").pipe(dest("dist"));
+const copyStatic = () => src("src/static/**/*", { encoding: false }).pipe(dest("dist"));
 
 // 3) functions to watch and serve
 // development with automatic refreshing after changes to CSS, templates or static files
