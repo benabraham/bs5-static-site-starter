@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "Daniel Srb",
   "license": "MIT",
   "description": "A basic template to start a website based on Bootstrap 5",
@@ -9,7 +9,7 @@
     "url": "https://github.com/benabraham/bs5-static-site-starter"
   },
   "engines": {
-    "node": "20"
+    "node": ">20"
   },
   "main": "index.js",
   "scripts": {
