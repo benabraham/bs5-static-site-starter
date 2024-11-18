@@ -3,6 +3,7 @@ import { readFileSync } from "fs";
 import { deleteAsync } from "del";
 import { nunjucksCompile } from "gulp-nunjucks";
 import gulp from "gulp";
+
 const { series, parallel, src, dest, watch } = gulp;
 import sass from "gulp-dart-sass";
 import sourcemaps from "gulp-sourcemaps";
@@ -50,7 +51,8 @@ const htmlCompile = () =>
 const sassCompile = () =>
     src("src/scss/index.scss") // this is the source for compilation
         .pipe(sourcemaps.init()) // initalizes a sourcemap
-        .pipe(sass.sync().on("error", sass.logError)) // compile SCSS to CSS and also tell us about a problem if happens
+        .pipe(sass.sync({ silenceDeprecations: ['import', 'legacy-js-api'], quietDeps: true }) // hide deprecation warnings
+            .on("error", sass.logError)) // compile SCSS to CSS and also tell us about a problem if happens
         .pipe(
             postcss([
                 autoprefixer, // automatically adds vendor prefixes if needed
@@ -86,10 +88,11 @@ const copyStatic = () => src("src/static/**/*", { encoding: false }).pipe(dest("
 const startBrowsersync = () =>
     browserSyncInstance.init({
         // initalize Browsersync
-        // port: 8080, // set different port
+        port: 3333, // set different port
         // open: false, // don’t open browser
         // ghostMode: false, // CLICKS, scrolls & form inputs on any device will not be mirrored to all others
         // reloadOnRestart: true, // reload each browser when Browsersync is restarted
+        ui: { port: 3344 }, // start ui on a different port
         server: {
             baseDir: "dist", // serve from this folder
             serveStaticOptions: {
