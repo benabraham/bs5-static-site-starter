@@ -107,7 +107,7 @@
     */
 
     // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-    // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+    // See https://www.w3.org/TR/WCAG/#contrast-minimum
     // $min-contrast-ratio: 4.5; $min-contrast-ratio: $min-contrast-ratio !global; // 4.5
 
     // Customize the light and dark text colors for use in our color contrast function.
@@ -1060,7 +1060,7 @@
     // $form-feedback-invalid-color: $danger; $form-feedback-invalid-color: $form-feedback-invalid-color !global; // $danger
 
     // $form-feedback-icon-valid-color: $form-feedback-valid-color; $form-feedback-icon-valid-color: $form-feedback-icon-valid-color !global; // $form-feedback-valid-color
-    // $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>"); $form-feedback-icon-valid: $form-feedback-icon-valid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>")
+    // $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1'/></svg>"); $form-feedback-icon-valid: $form-feedback-icon-valid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1'/></svg>")
     // $form-feedback-icon-invalid-color: $form-feedback-invalid-color; $form-feedback-icon-invalid-color: $form-feedback-icon-invalid-color !global; // $form-feedback-invalid-color
     // $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>"); $form-feedback-icon-invalid: $form-feedback-icon-invalid !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>")
 
@@ -1248,7 +1248,7 @@
     // $pagination-bg: var(--#{$prefix}body-bg); $pagination-bg: $pagination-bg !global; // var(--#{$prefix}body-bg)
     // $pagination-border-radius: var(--#{$prefix}border-radius); $pagination-border-radius: $pagination-border-radius !global; // var(--#{$prefix}border-radius)
     // $pagination-border-width: var(--#{$prefix}border-width); $pagination-border-width: $pagination-border-width !global; // var(--#{$prefix}border-width)
-    // $pagination-margin-start: calc(#{$pagination-border-width} * -1); $pagination-margin-start: $pagination-margin-start !global; // calc(#{$pagination-border-width} * -1)
+    // $pagination-margin-start: calc(-1 * #{$pagination-border-width}); $pagination-margin-start: $pagination-margin-start !global; // calc(-1 * #{$pagination-border-width})
     // $pagination-border-color: var(--#{$prefix}border-color); $pagination-border-color: $pagination-border-color !global; // var(--#{$prefix}border-color)
 
     // $pagination-focus-color: var(--#{$prefix}link-hover-color); $pagination-focus-color: $pagination-focus-color !global; // var(--#{$prefix}link-hover-color)
@@ -1331,8 +1331,8 @@
     // $accordion-icon-transition: transform .2s ease-in-out; $accordion-icon-transition: $accordion-icon-transition !global; // transform .2s ease-in-out
     // $accordion-icon-transform: rotate(-180deg); $accordion-icon-transform: $accordion-icon-transform !global; // rotate(-180deg)
 
-    // $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>"); $accordion-button-icon: $accordion-button-icon !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>")
-    // $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>"); $accordion-button-active-icon: $accordion-button-active-icon !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>")
+    // $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>"); $accordion-button-icon: $accordion-button-icon !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>")
+    // $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>"); $accordion-button-active-icon: $accordion-button-active-icon !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>")
 
     // Tooltips
 
@@ -1424,7 +1424,7 @@
 
     // $modal-title-line-height: $line-height-base; $modal-title-line-height: $modal-title-line-height !global; // $line-height-base
 
-    // $modal-content-color: null; $modal-content-color: $modal-content-color !global; // null
+    // $modal-content-color: var(--#{$prefix}body-color); $modal-content-color: $modal-content-color !global; // var(--#{$prefix}body-color)
     // $modal-content-bg: var(--#{$prefix}body-bg); $modal-content-bg: $modal-content-bg !global; // var(--#{$prefix}body-bg)
     // $modal-content-border-color: var(--#{$prefix}border-color-translucent); $modal-content-border-color: $modal-content-border-color !global; // var(--#{$prefix}border-color-translucent)
     // $modal-content-border-width: var(--#{$prefix}border-width); $modal-content-border-width: $modal-content-border-width !global; // var(--#{$prefix}border-width)
@@ -1545,6 +1545,7 @@
     // $carousel-control-opacity: .5; $carousel-control-opacity: $carousel-control-opacity !global; // .5
     // $carousel-control-hover-opacity: .9; $carousel-control-hover-opacity: $carousel-control-hover-opacity !global; // .9
     // $carousel-control-transition: opacity .15s ease; $carousel-control-transition: $carousel-control-transition !global; // opacity .15s ease
+    // $carousel-control-icon-filter: null; $carousel-control-icon-filter: $carousel-control-icon-filter !global; // null
 
     // $carousel-indicator-width: 30px; $carousel-indicator-width: $carousel-indicator-width !global; // 30px
     // $carousel-indicator-height: 3px; $carousel-indicator-height: $carousel-indicator-height !global; // 3px
@@ -1562,15 +1563,15 @@
 
     // $carousel-control-icon-width: 2rem; $carousel-control-icon-width: $carousel-control-icon-width !global; // 2rem
 
-    // $carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>"); $carousel-control-prev-icon-bg: $carousel-control-prev-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>")
-    // $carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>"); $carousel-control-next-icon-bg: $carousel-control-next-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>")
+    // $carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>"); $carousel-control-prev-icon-bg: $carousel-control-prev-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/></svg>")
+    // $carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>"); $carousel-control-next-icon-bg: $carousel-control-next-icon-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/></svg>")
 
     // $carousel-transition-duration: .6s; $carousel-transition-duration: $carousel-transition-duration !global; // .6s
     // $carousel-transition: transform $carousel-transition-duration ease-in-out; $carousel-transition: $carousel-transition !global; // transform $carousel-transition-duration ease-in-out // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
-    // $carousel-dark-indicator-active-bg: $black; $carousel-dark-indicator-active-bg: $carousel-dark-indicator-active-bg !global; // $black
-    // $carousel-dark-caption-color: $black; $carousel-dark-caption-color: $carousel-dark-caption-color !global; // $black
-    // $carousel-dark-control-icon-filter: invert(1) grayscale(100); $carousel-dark-control-icon-filter: $carousel-dark-control-icon-filter !global; // invert(1) grayscale(100)
+    // $carousel-dark-indicator-active-bg: $black; $carousel-dark-indicator-active-bg: $carousel-dark-indicator-active-bg !global; // $black // Deprecated in v5.3.4
+    // $carousel-dark-caption-color: $black; $carousel-dark-caption-color: $carousel-dark-caption-color !global; // $black // Deprecated in v5.3.4
+    // $carousel-dark-control-icon-filter: invert(1) grayscale(100); $carousel-dark-control-icon-filter: $carousel-dark-control-icon-filter !global; // invert(1) grayscale(100) // Deprecated in v5.3.4
 
     // Spinners
 
@@ -1591,13 +1592,14 @@
     // $btn-close-padding-x: .25em; $btn-close-padding-x: $btn-close-padding-x !global; // .25em
     // $btn-close-padding-y: $btn-close-padding-x; $btn-close-padding-y: $btn-close-padding-y !global; // $btn-close-padding-x
     // $btn-close-color: $black; $btn-close-color: $btn-close-color !global; // $black
-    // $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"); $btn-close-bg: $btn-close-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>")
+    // $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>"); $btn-close-bg: $btn-close-bg !global; // url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>")
     // $btn-close-focus-shadow: $focus-ring-box-shadow; $btn-close-focus-shadow: $btn-close-focus-shadow !global; // $focus-ring-box-shadow
     // $btn-close-opacity: .5; $btn-close-opacity: $btn-close-opacity !global; // .5
     // $btn-close-hover-opacity: .75; $btn-close-hover-opacity: $btn-close-hover-opacity !global; // .75
     // $btn-close-focus-opacity: 1; $btn-close-focus-opacity: $btn-close-focus-opacity !global; // 1
     // $btn-close-disabled-opacity: .25; $btn-close-disabled-opacity: $btn-close-disabled-opacity !global; // .25
-    // $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%); $btn-close-white-filter: $btn-close-white-filter !global; // invert(1) grayscale(100%) brightness(200%)
+    // $btn-close-filter: null; $btn-close-filter: $btn-close-filter !global; // null
+    // $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%); $btn-close-white-filter: $btn-close-white-filter !global; // invert(1) grayscale(100%) brightness(200%) // Deprecated in v5.3.4
 
     // Offcanvas
 

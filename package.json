@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "author": "Daniel Srb",
   "license": "MIT",
   "description": "A basic template to start a website based on Bootstrap 5",
@@ -9,7 +9,7 @@
     "url": "https://github.com/benabraham/bs5-static-site-starter"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "main": "index.js",
   "scripts": {
@@ -19,20 +19,20 @@
     "deploy": "npx update-browserslist-db@latest && gulp build && surge dist --domain \"https://my-first-bootstrap-5-website.surge.sh\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "bootstrap": "5.3.3",
-    "browser-sync": "^3.0.3",
+    "autoprefixer": "^10.4.21",
+    "bootstrap": "5.3.7",
+    "browser-sync": "^3.0.4",
     "del": "^8.0.0",
-    "gulp": "^5.0.0",
+    "gulp": "^5.0.1",
     "gulp-csso": "^4.0.1",
     "gulp-dart-sass": "^1.1.0",
     "gulp-nunjucks": "^6.0.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.6",
     "postcss-uncss": "^0.17.0",
-    "prettier": "3.3.3",
-    "sass": "^1.81.0",
+    "prettier": "3.6.2",
+    "sass": "^1.89.2",
     "surge": "^0.24.6",
     "uncss": "^0.17.3"
   },
