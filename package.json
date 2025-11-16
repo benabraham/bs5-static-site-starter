@@ -1,6 +1,6 @@
 {
   "name": "MyFirstBootstrapWebsite",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "author": "Daniel Srb",
   "license": "MIT",
   "description": "A basic template to start a website based on Bootstrap 5",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
-    "bootstrap": "5.3.7",
+    "bootstrap": "5.3.8",
     "browser-sync": "^3.0.4",
     "del": "^8.0.0",
     "gulp": "^5.0.1",
